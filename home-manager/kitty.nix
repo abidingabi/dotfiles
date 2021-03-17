@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
 
-    font.name = "Fira Code";
+    font.name = "Fira Mono";
 
     settings = {
       cursor_shape = "beam";

@@ -60,7 +60,7 @@
     android-studio
 
     # Fonts
-    fira fira-code fira-mono
+    fira fira-mono
     montserrat
     overpass
   ];
