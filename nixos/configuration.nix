@@ -45,7 +45,6 @@
   users.users.dansman805 = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkManager" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.fish;
   };
 
   programs.fish.enable = true;

@@ -9,6 +9,7 @@
     settings = {
       cursor_shape = "beam";
       font_size = 14;
+      shell = "fish";
     };
   };
 }
