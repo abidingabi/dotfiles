@@ -32,7 +32,7 @@
   # Configure keymap in X11
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "colemak";
-  services.xserver.xkbOptions = "caps:escape,grp:sclk_toggle,grp_led:scroll";
+  services.xserver.xkbOptions = "grp:sclk_toggle,grp_led:scroll";
   
   # Enable CUPS to print documents.
   services.printing.enable = true;

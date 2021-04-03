@@ -198,9 +198,6 @@ bar {
 
 default_border pixel 2
 
-exec "~/.screenlayout/screenlayout.sh"
-exec_always "setxkbmap -layout 'us,us' -variant 'colemak,basic' -option caps:escape -option grp:sclk_toggle -option grp_led:scroll"
-
 # Launch random stuff
 bindsym $mod+Shift+Return exec firefox
 bindsym $mod+e exec "emacsclient -c"
