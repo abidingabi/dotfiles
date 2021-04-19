@@ -81,6 +81,9 @@
       auto-save-default t                         ; Nobody likes to loose work, I certainly don't
       truncate-string-ellipsis "…")               ; Unicode ellispis are nicer than "...", and also save /precious/
 
+;; elfeed configuration
+(add-hook! 'elfeed-search-mode-hook 'elfeed-update)
+
 ;; keybindings
 (map! :leader
       :desc "Mixed-pitch mode"
