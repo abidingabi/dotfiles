@@ -54,3 +54,9 @@
 (package! screenshot
   :recipe (:host github :repo "tecosaur/screenshot"))
 
+
+(package! calctex
+  :recipe (:host github :repo "johnbcoughlin/calctex"
+           :files ("*.el" "calctex/*.el" "calctex-contrib/*.el"
+                   "org-calctex/*.el" "vendor"))
+  :pin "784cf911bc96aac0f47d529e8cee96ebd7cc31c9")

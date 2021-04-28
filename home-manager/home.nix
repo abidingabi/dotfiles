@@ -54,7 +54,13 @@
     nixfmt
     zig
     nodejs
-    texlive.combined.scheme-medium
+
+    # LaTeX
+    (texlive.combine { inherit (texlive)
+      scheme-medium
+    # These packages are needed for CalcTeX
+      mathalpha soul amsmath adjustbox collectbox mathtools cancel stix2-type1; })
+
 
     # IDEs
     jetbrains.idea-community

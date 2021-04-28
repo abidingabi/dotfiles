@@ -84,6 +84,51 @@
 ;; elfeed configuration
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
+;; calc configuration
+(setq calc-angle-mode 'rad  ; radians are rad
+      calc-symbolic-mode t) ; keeps expressions like \sqrt{2} irrational for as long as possible
+;; calctex configuration (stolen from https://tecosaur.github.io/emacs-config/config.html#calc-calctex)
+
+
+(use-package! calctex
+  :commands calctex-mode
+  :init
+  (add-hook 'calc-mode-hook #'calctex-mode)
+  :config
+  (setq ;; calctex-additional-latex-packages "
+;; \\usepackage[usenames]{xcolor}
+;; \\usepackage{soul}
+;; \\usepackage{adjustbox}
+;; \\usepackage{amsmath}
+;; \\usepackage{amssymb}
+;; \\usepackage{siunitx}
+;; \\usepackage{cancel}
+;; \\usepackage{mathtools}
+;; \\usepackage{mathalpha}
+;; \\usepackage{xparse}
+;; \\usepack
+;; age{arevmath}"
+        calctex-additional-latex-macros
+        (concat calctex-additional-latex-macros
+                "\n\\let\\evalto\\Rightarrow"))
+  (defadvice! no-messaging-a (orig-fn &rest args)
+    :around #'calctex-default-dispatching-render-process
+    (let ((inhibit-message t) message-log-max)
+      (apply orig-fn args)))
+  ;; Fix hardcoded dvichop path (whyyyyyyy)
+  (let ((vendor-folder (concat (file-truename doom-local-dir)
+                               "straight/"
+                               (format "build-%s" emacs-version)
+                               "/calctex/vendor/")))
+    (setq calctex-dvichop-sty (concat vendor-folder "texd/dvichop")
+          calctex-dvichop-bin (concat vendor-folder "texd/dvichop")))
+  (unless (file-exists-p calctex-dvichop-bin)
+    (message "CalcTeX: Building dvichop binary")
+    (let ((default-directory (file-name-directory calctex-dvichop-bin)))
+      (call-process "make" nil nil nil))))
+
+
+
 ;; keybindings
 (map! :leader
       :desc "Mixed-pitch mode"
