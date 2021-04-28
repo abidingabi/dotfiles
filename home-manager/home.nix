@@ -20,6 +20,7 @@
     copyq
     scrcpy
     fzf
+    peek
 
     # Games
     minecraft
