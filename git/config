@@ -17,3 +17,5 @@ name=Daniel Goz
     defaultBranch = main
 [github]
     user = dansman805
+[alias]
+    pushf = push --force-with-lease
