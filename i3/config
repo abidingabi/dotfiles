@@ -202,6 +202,7 @@ default_border pixel 2
 bindsym $mod+Shift+Return exec firefox
 bindsym $mod+e exec "emacsclient -c"
 bindsym $mod+i exec "~/.emacs.d/bin/doom everywhere"
+bindsym $mod+c exec "emacsclient --eval '(+org-capture/open-frame)'"
 
 # Clipboard management
 exec_always copyq
@@ -216,6 +217,9 @@ bindsym $mod+Shift+s exec "flameshot gui"
 # Configure firefox picture-in-picture
 for_window [title="Picture-in-Picture"] \
     sticky enable, border none, resize set 480 270, move position 2050 650
+
+# Configure doom-capture
+for_window [title="doom-capture"] floating enable
 
 # Wallpaper
 exec_always "FractalArt --no-bg -f /dev/stdout \
