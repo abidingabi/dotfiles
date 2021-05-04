@@ -127,7 +127,14 @@
     (let ((default-directory (file-name-directory calctex-dvichop-bin)))
       (call-process "make" nil nil nil))))
 
-
+;; ligatures
+(plist-put! +ligatures-extra-symbols
+  ;; org
+  :name          "»"
+  :src_block     "»"
+  :src_block_end "«"
+  :quote         "“"
+  :quote_end     "”")
 
 ;; keybindings
 (map! :leader
