@@ -59,6 +59,7 @@
 
   services.interception-tools.enable = true;
   services.picom.enable = true;
+  services.earlyoom.enable = true;
 
   system.stateVersion = "20.09"; # Did you read the comment?
 }
