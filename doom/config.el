@@ -29,6 +29,9 @@
 (setq doom-theme 'doom-flatwhite)
 ;; for dark mode: doom-vibrant, alternate light mode doom-nord-light
 
+;; Determines major mode when scratch buffer is initially opened
+(setq doom-scratch-initial-major-mode "org-mode")
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
