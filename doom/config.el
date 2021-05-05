@@ -91,11 +91,13 @@
 ;; elfeed configuration
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
+;; autoload jq-mode on jq files
+(add-to-list 'auto-mode-alist '("\\.jq$" . jq-mode))
+
 ;; calc configuration
 (setq calc-angle-mode 'rad  ; radians are rad
       calc-symbolic-mode t) ; keeps expressions like \sqrt{2} irrational for as long as possible
 ;; calctex configuration (stolen from https://tecosaur.github.io/emacs-config/config.html#calc-calctex)
-
 
 (use-package! calctex
   :commands calctex-mode

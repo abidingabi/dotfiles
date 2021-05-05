@@ -50,6 +50,7 @@
 ;(unpin! t)
 (package! literate-calc-mode)
 (package! fish-mode)
+(package! jq-mode)
 
 (package! screenshot
   :recipe (:host github :repo "tecosaur/screenshot"))
