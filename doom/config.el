@@ -71,8 +71,6 @@
 (setq explicit-shell-file-name (executable-find "fish"))
 (setq vterm-shell (executable-find "fish"))
 
-(setq display-line-numbers-type 'relative)
-
 ;; ligatures
 (setq +ligatures-in-modes '(org-mode))
 (setq +ligatures-extras-in-modes '(org-mode))
