@@ -7,7 +7,7 @@
 
   home.packages = with pkgs; [
     # GUI applications
-    firefox google-chrome
+    firefox google-chrome unstable.nyxt
     discord
     pavucontrol
     xfce.thunar
