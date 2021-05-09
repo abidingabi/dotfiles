@@ -61,3 +61,7 @@
            :files ("*.el" "calctex/*.el" "calctex-contrib/*.el"
                    "org-calctex/*.el" "vendor"))
   :pin "784cf911bc96aac0f47d529e8cee96ebd7cc31c9")
+
+(package! top-level-keybinds
+  :recipe (:host github
+           :repo "hugonobrega/top-level-keybinds"))

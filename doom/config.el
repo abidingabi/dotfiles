@@ -142,3 +142,8 @@
 (map! :leader
       :desc "Take a screenshot"
       "S" #'screenshot)
+
+
+(map! :leader
+      :desc "Show top level keybinds"
+      "h b T" #'tlk/show)
