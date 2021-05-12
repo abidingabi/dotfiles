@@ -80,6 +80,12 @@
   services.emacs.enable = true;
   services.emacs.client.enable = true;
 
+  programs.direnv = {
+    enable = true;
+    enableFishIntegration = true;
+    enableNixDirenvIntegration = true;
+  };
+
   services.dunst.enable = true;
   services.dunst.settings = {
       global = {
