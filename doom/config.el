@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Daniel"
-      user-mail-address "dansman805@gmail.com")
+(setq user-full-name "Daniel Goz"
+      user-mail-address "daniel@dgoz.net")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -92,6 +92,23 @@
 ;; autoload jq-mode on jq files
 (add-to-list 'auto-mode-alist '("\\.jq$" . jq-mode))
 
+;; mu4e configuration
+(after! mu4e
+  (setq sendmail-program "/etc/profiles/per-user/dansman805/bin/msmtp"
+        send-mail-function #'smtpmail-send-it
+        message-sendmail-f-is-evil t
+        message-sendmail-extra-arguments '("--read-envelope-from")
+        message-send-mail-function #'message-send-mail-with-sendmail))
+
+(add-load-path! "~/.nix-profile/share/emacs/site-lisp/mu4e")
+;; Each path is relative to `+mu4e-mu4e-mail-path', which is ~/.mail by default
+(set-email-account! "daniel"
+  '((mu4e-sent-folder       . "/daniel/Sent")
+    (mu4e-drafts-folder     . "/daniel/Drafts")
+    (mu4e-trash-folder      . "/daniel/Trash")
+    (mu4e-refile-folder     . "/daniel/Archive")
+    (smtpmail-smtp-user     . "daniel@dgoz.net"))
+  t)
 ;; calc configuration
 (setq calc-angle-mode 'rad  ; radians are rad
       calc-symbolic-mode t) ; keeps expressions like \sqrt{2} irrational for as long as possible

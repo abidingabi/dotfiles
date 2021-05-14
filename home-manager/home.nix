@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./email.nix
     ./kitty.nix
   ];
 
