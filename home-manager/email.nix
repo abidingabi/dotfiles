@@ -1,13 +1,13 @@
 { pkgs, ... }:
 
 {
-  # have to install mu manually through nix-env -iA nixos.mu
   programs.mbsync.enable = true;
   services.mbsync = {
     enable = true;
     postExec = "\${pkgs.mu}/bin/mu index";
   };
 
+  programs.mu.enable = true;
   programs.msmtp.enable = true;
 
   accounts.email = {

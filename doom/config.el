@@ -100,7 +100,7 @@
         message-sendmail-extra-arguments '("--read-envelope-from")
         message-send-mail-function #'message-send-mail-with-sendmail))
 
-(add-load-path! "~/.nix-profile/share/emacs/site-lisp/mu4e")
+(add-load-path! "/etc/profiles/per-user/dansman805/share/emacs/site-lisp/mu4e")
 ;; Each path is relative to `+mu4e-mu4e-mail-path', which is ~/.mail by default
 (set-email-account! "daniel"
   '((mu4e-sent-folder       . "/daniel/Sent")
