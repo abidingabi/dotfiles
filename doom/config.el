@@ -86,6 +86,12 @@
       auto-save-default t                         ; Nobody likes to loose work, I certainly don't
       truncate-string-ellipsis "…")               ; Unicode ellispis are nicer than "...", and also save /precious/
 
+;; Always keep the cursor in the center of the screen in writeroom mode
+(add-hook! 'writeroom-mode-hook
+  (if writeroom-mode
+      (add-hook 'post-command-hook #'recenter nil t)
+    (remove-hook 'post-command-hook #'recenter t)))
+
 ;; elfeed configuration
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
