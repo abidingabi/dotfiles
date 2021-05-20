@@ -75,6 +75,12 @@
 (setq +ligatures-in-modes '(org-mode))
 (setq +ligatures-extras-in-modes '(org-mode))
 
+;; Make LaTeX snippets look nice in org mode
+(after! org
+  (plist-put org-format-latex-options :background "Transparent")
+  (setq org-highlight-latex-and-related '(native script entities))
+  (add-to-list 'org-src-block-faces '("latex" (:inherit default :extend t)))
+)
 ;; stolen from https://tecosaur.github.io/emacs-config/config.html#better-defaults
 (setq-default
  delete-by-moving-to-trash t                      ; Delete files to trash
