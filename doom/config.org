@@ -1,0 +1,195 @@
+* Why a literate config?
+Mostly because this makes it easier to organize stuff… If you want a true literate config, check out [[https:tecosaur.github.io/emacs-config/config.html][tecosaur's masterpiece]]. That's why most of the commentary is snark, and not actual explanations.
+* Basic Configuration
+** Who am I?
+#+begin_src elisp
+(setq user-full-name "Daniel Goz"
+      user-mail-address "daniel@dgoz.net")
+#+end_src
+** Where are my secrets?
+#+begin_src elisp
+(setq auth-sources '("~/.authinfo"))
+#+end_src
+I really ought to use gpg for this...
+** Who likes losing work?
+*** Undo
+This sets the maximum amount of undo information to 80Mb. In addition to this, by default, all changes while in insert are one big blob; this gives more undo states.
+#+begin_src elisp
+(setq undo-limit 80000000
+      evil-want-fine-undo t)
+#+end_src
+*** Autosave
+#+begin_src elisp
+(setq auto-save-default t)
+#+end_src
+*** Delete files to trash
+Because I'm not perfect.
+#+begin_src elisp
+(setq-default delete-by-moving-to-trash t)
+#+end_src
+** Window Management
+#+begin_src elisp
+(setq-default window-combination-resize t)
+#+end_src
+** What shell do I use?
+Fish.
+#+begin_src elisp
+(setq explicit-shell-file-name (executable-find "fish"))
+(setq vterm-shell (executable-find "fish"))
+#+end_src
+* Visuals
+Because some things should look nice.
+** Theme
+Light themes are nice for plain text and code, and I especially like flatwhite's choice of using backgrounds for syntax highlighting.
+#+begin_src elisp
+(setq doom-theme 'doom-flatwhite)
+#+end_src
+** Fonts
+Fira Mono is an excellent monospace font, and Overpass is a nice proportional one.
+#+begin_src elisp
+(setq doom-font "Fira Mono 14"
+      doom-variable-pitch-font "Overpass 14")
+#+end_src
+*** Ligatures
+In general, I don't like ligatures in programming languages, however they make reading org mode documents much more pleasing to the eye.
+#+begin_src elisp
+(setq +ligatures-in-modes '(org-mode))
+(setq +ligatures-extras-in-modes '(org-mode))
+#+end_src
+** Splashcreen
+Doom's text logo on the splashscreen is nice, but it'd be nicer with a cute demon from [[https://github.com/jeetelongname/doom-banners]].
+[[file:cute-demon.png]]
+#+begin_src elisp
+(setq fancy-splash-image "~/dotfiles/doom/cute-demon.png")
+#+end_src
+** Line Numbers
+I used to use relative line numbers, but then I realized I never actually use them, so now I use normal line numbers.
+#+begin_src elisp
+(setq display-line-numbers-type t)
+#+end_src
+** Cut off text
+By default, emacs uses =...= for cut off text; not only does the unicode =…= save space but it also saves some space.
+#+begin_src elisp
+(setq truncate-string-ellipsis "…")
+#+end_src
+** Make the cursor the size of the character under it
+This is especially relevant on e.g. tabs.
+#+begin_src elisp
+(setq-default x-stretch-cursor t)
+#+end_src
+* Apps
+** RSS
+Elfeed is a nice rss reader, however I'd like it to pull from feeds whenever it is opened.
+#+begin_src elisp
+(add-hook! 'elfeed-search-mode-hook 'elfeed-update)
+#+end_src
+** Email
+Mu4e is a nice email client, so let's use that.
+
+The loadpath needs to be set for mu4e, otherwise it will not launch.
+#+begin_src elisp
+(add-load-path! "/etc/profiles/per-user/dansman805/share/emacs/site-lisp/mu4e")
+#+end_src
+*** Email Directories
+To handle your email, mu4e needs to know where it is. These paths are relative to =+mu4e-mu4e-mail-path=, which is =~/.mail= by default, and is not set to another value here.
+#+begin_src elisp
+(set-email-account! "daniel"
+  '((mu4e-sent-folder       . "/daniel/Sent")
+    (mu4e-drafts-folder     . "/daniel/Drafts")
+    (mu4e-trash-folder      . "/daniel/Trash")
+    (mu4e-refile-folder     . "/daniel/Archive")
+    (smtpmail-smtp-user     . "daniel@dgoz.net"))
+  t)
+#+end_src
+*** Sending Email
+Sending email is nice too.
+#+begin_src elisp
+(after! mu4e
+  (setq sendmail-program "/etc/profiles/per-user/dansman805/bin/msmtp"
+        send-mail-function #'smtpmail-send-it
+        message-sendmail-f-is-evil t
+        message-sendmail-extra-arguments '("--read-envelope-from")
+        message-send-mail-function #'message-send-mail-with-sendmail))
+#+end_src
+** Calc
+Calc is really nice to, well, do math.
+
+Any sane person prefers radians and keeping things exact; e.g. $\sqrt{2}$ should be kept irrational for as long as possible.
+#+begin_src elisp
+(setq calc-angle-mode 'rad
+      calc-symbolic-mode t)
+#+end_src
+**** CalcTeX
+CalcTeX renders math expressions in =calc-mode= through LaTeX previews, making them easier to read.
+
+However, it makes some questionable choices regarding the hardcoding of paths—luckily, tecosaur [[https:tecosaur.github.io/emacs-config/config.html#calc-calctex][already figured this out]] for us :).
+#+begin_src elisp
+(use-package! calctex
+  :commands calctex-mode
+  :init
+  (add-hook 'calc-mode-hook #'calctex-mode)
+  :config
+  (setq calctex-additional-latex-macros
+        (concat calctex-additional-latex-macros
+                "\n\\let\\evalto\\Rightarrow"))
+  (defadvice! no-messaging-a (orig-fn &rest args)
+    :around #'calctex-default-dispatching-render-process
+    (let ((inhibit-message t) message-log-max)
+      (apply orig-fn args)))
+  ;; Fix hardcoded dvichop path (whyyyyyyy)
+  (let ((vendor-folder (concat (file-truename doom-local-dir)
+                               "straight/"
+                               (format "build-%s" emacs-version)
+                               "/calctex/vendor/")))
+    (setq calctex-dvichop-sty (concat vendor-folder "texd/dvichop")
+          calctex-dvichop-bin (concat vendor-folder "texd/dvichop")))
+  (unless (file-exists-p calctex-dvichop-bin)
+    (message "CalcTeX: Building dvichop binary")
+    (let ((default-directory (file-name-directory calctex-dvichop-bin)))
+      (call-process "make" nil nil nil))))
+#+end_src
+* Modes
+** Major
+*** JQ
+=jq= is an extremely useful command line tool, but integration with emacs is nice, especially for =jq= programs.
+
+This automatically loads jq-mode when files with the extension =jq= are opened.
+#+begin_src elisp
+(add-to-list 'auto-mode-alist '("\\.jq$" . jq-mode))
+#+end_src
+*** Org
+**** Org Directory
+This controls where org files are stored.
+#+begin_src elisp
+(setq org-directory "~/org/")
+#+end_src
+** Minor
+*** Writeroom
+Writeroom mode is great for focusing on writing, but is even greater when the cursor stayed vertically centered.
+#+begin_src elisp
+(add-hook! 'writeroom-mode-hook
+  (if writeroom-mode
+      (add-hook 'post-command-hook #'recenter nil t)
+    (remove-hook 'post-command-hook #'recenter t)))
+#+end_src
+*** Evil Snipe
+Evil snipe is great at quickly getting to something, but only being able to do it across a line is annoying.
+#+begin_src elisp
+(setq evil-snipe-scope 'visible
+      evil-snipe-repeat-scope 'whole-buffer)
+#+end_src
+* Keybinds
+#+begin_src elisp
+(map! :leader
+      :desc "Mixed-pitch mode"
+      "t m" #'mixed-pitch-mode)
+
+(map! :leader
+      :desc "Take a screenshot"
+      "S" #'screenshot)
+
+(map! :leader
+      :desc "Show top level keybinds"
+      "h b T" #'tlk/show)
+
+#+end_src
