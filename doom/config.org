@@ -68,7 +68,7 @@ I used to use relative line numbers, but then I realized I never actually use th
 (setq display-line-numbers-type t)
 #+end_src
 ** Cut off text
-By default, emacs uses =...= for cut off text; not only does the unicode =…= save space but it also saves some space.
+By default, emacs uses =...= for cut off text; not only does the unicode =…= look nicer but it also saves some space.
 #+begin_src elisp
 (setq truncate-string-ellipsis "…")
 #+end_src
