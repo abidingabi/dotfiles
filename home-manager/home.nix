@@ -28,7 +28,8 @@
     multimc
 
     # Command line utilities
-    ripgrep fd
+    ripgrep ripgrep-all
+    fd
     coreutils
     tree jq trash-cli
     tealdeer
