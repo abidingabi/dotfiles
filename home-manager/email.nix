@@ -4,7 +4,7 @@
   programs.mbsync.enable = true;
   services.mbsync = {
     enable = true;
-    postExec = "\${pkgs.mu}/bin/mu index";
+    postExec = "${pkgs.mu}/bin/mu index";
   };
 
   programs.mu.enable = true;
@@ -33,7 +33,7 @@
       msmtp.enable = true;
       mu.enable = true;
 
-      passwordCommand = "cat ~/.local/share/email/daniel-password";
+      passwordCommand = "${pkgs.coreutils}/bin/cat /home/dansman805/.local/share/email/daniel-password";
     };
   };
 }
