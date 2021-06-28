@@ -60,6 +60,7 @@
     git wget vim gcc
     fish
     rdiff-backup # for backup
+    dconf
    ];
 
   services.interception-tools.enable = true;
