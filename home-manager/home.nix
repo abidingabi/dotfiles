@@ -20,7 +20,6 @@
     feh
     copyq
     scrcpy
-    fzf
     peek
 
     # Games
@@ -28,10 +27,14 @@
     multimc
 
     # Command line utilities
+    coreutils
     ripgrep ripgrep-all
     fd
-    coreutils
-    tree jq trash-cli
+    fzf
+    bat
+    tree
+    jq
+    trash-cli
     tealdeer
     ffmpeg imagemagick pandoc
     haskellPackages.FractalArt
