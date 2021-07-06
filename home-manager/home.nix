@@ -12,6 +12,7 @@
     discord
     pavucontrol
     xfce.thunar
+    rpi-imager
 
     # GUI utilities
     flameshot
