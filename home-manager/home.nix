@@ -13,6 +13,7 @@
     pavucontrol
     xfce.thunar
     rpi-imager
+    super-slicer
 
     # GUI utilities
     flameshot
