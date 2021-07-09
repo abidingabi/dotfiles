@@ -223,3 +223,7 @@ for_window [title="Picture-in-Picture"] \
 # Wallpaper
 exec_always "FractalArt --no-bg -f /dev/stdout \
     | feh --bg-fill --no-fehbg --no-xinerama -"
+
+# Rename the "2" workspace to "10" on launch
+# Workspace "2" will only be available on launch if a second monitor is present
+exec "i3-msg 'rename workspace 2 to 10'"
