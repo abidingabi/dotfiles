@@ -33,7 +33,8 @@
       msmtp.enable = true;
       mu.enable = true;
 
-      passwordCommand = "${pkgs.coreutils}/bin/cat /home/dansman805/.local/share/email/daniel-password";
+      passwordCommand =
+        "${pkgs.coreutils}/bin/cat /home/dansman805/.local/share/email/daniel-password";
     };
   };
 }

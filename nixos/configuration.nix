@@ -28,12 +28,12 @@
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
-  
+
   # Configure keymap in X11
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "colemak";
   services.xserver.xkbOptions = "grp:sclk_toggle,grp_led:scroll";
-  
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -52,11 +52,14 @@
 
   # System-level packages
   environment.systemPackages = with pkgs; [
-    git wget vim gcc
+    git
+    wget
+    vim
+    gcc
     fish
     rdiff-backup # for backup
     dconf
-   ];
+  ];
 
   services.interception-tools.enable = true;
   services.picom.enable = true;

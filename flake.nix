@@ -18,13 +18,16 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.dansman805 = import ./home-manager/home-desktop.nix;
+            home-manager.users.dansman805 =
+              import ./home-manager/home-desktop.nix;
           }
 
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               emacs-overlay.overlay
-              (self: super: {unstable = nixpkgs-unstable.legacyPackages.x86_64-linux; })
+              (self: super: {
+                unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+              })
             ];
           })
         ];
@@ -40,12 +43,15 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.dansman805 = import ./home-manager/home-laptop.nix;
+            home-manager.users.dansman805 =
+              import ./home-manager/home-laptop.nix;
           }
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               emacs-overlay.overlay
-              (self: super: {unstable = nixpkgs-unstable.legacyPackages.x86_64-linux; })
+              (self: super: {
+                unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+              })
             ];
           })
         ];
