@@ -119,5 +119,13 @@
     };
   };
 
+  services.redshift = {
+    enable = true;
+    tray = true;
+
+    dawnTime = "6:00-8:00";
+    duskTime = "18:00-20:00";
+  };
+
   fonts.fontconfig.enable = true;
 }
