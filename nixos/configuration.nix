@@ -34,6 +34,9 @@
   services.xserver.xkbVariant = "colemak";
   services.xserver.xkbOptions = "grp:sclk_toggle,grp_led:scroll";
 
+  # Disable mouse acceleration
+  services.xserver.libinput.mouse.accelProfile = "flat";
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
