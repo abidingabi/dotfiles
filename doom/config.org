@@ -44,6 +44,11 @@ Light themes are nice for plain text and code, and I especially like flatwhite's
 #+begin_src elisp
 (setq doom-theme 'doom-flatwhite)
 #+end_src
+** Custom Faces
+#+begin_src elisp
+(custom-set-faces!
+  `(cursor :background ,(doom-color 'blue)))
+#+end_src
 ** Fonts
 Fira Mono is an excellent monospace font, and Overpass is a nice proportional one.
 #+begin_src elisp
