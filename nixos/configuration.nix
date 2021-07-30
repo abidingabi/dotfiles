@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  boot.kernel.sysctl = { "kernel.sysrq" = 1; };
+
   nix = {
     autoOptimiseStore = true;
     package = pkgs.nixFlakes;
@@ -24,7 +26,7 @@
   networking.interfaces.enp3s0.useDHCP = true;
   networking.interfaces.wlp8s0.useDHCP = true;
 
-  # Enable i3wm 
+  # Enable i3wm
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
@@ -70,4 +72,3 @@
 
   system.stateVersion = "20.09"; # Did you read the comment?
 }
-
