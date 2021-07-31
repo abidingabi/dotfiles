@@ -60,7 +60,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "0 * * * *      root      rdiff-backup -v5 /home/dansman805 /backup/home/ > /tmp/backup.log"
+      "0 * * * *      root      rdiff-backup -v5 --exclude /home/dansman805/.cache /home/dansman805 /backup/home/ && rdiff-backup --remove-older-than 2W /backup/home > /tmp/backup.log"
     ];
   };
 }
