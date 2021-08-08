@@ -55,12 +55,6 @@ Fira Mono is an excellent monospace font, and Overpass is a nice proportional on
 (setq doom-font "Fira Mono 14"
       doom-variable-pitch-font "Overpass 14")
 #+end_src
-*** Ligatures
-In general, I don't like ligatures in programming languages, however they make reading org mode documents much more pleasing to the eye.
-#+begin_src elisp
-(setq +ligatures-in-modes '(org-mode))
-(setq +ligatures-extras-in-modes '(org-mode))
-#+end_src
 ** Splashcreen
 Doom's text logo on the splashscreen is nice, but it'd be nicer with a cute demon from [[https://github.com/jeetelongname/doom-banners]].
 [[file:cute-demon.png]]
@@ -167,6 +161,37 @@ This automatically loads jq-mode when files with the extension =jq= are opened.
 This controls where org files are stored.
 #+begin_src elisp
 (setq org-directory "~/org/")
+#+end_src
+**** Visuals
+A lot of this is taken from [[https://tecosaur.github.io/emacs-config/config.html#org-visuals][Tecosaur's org mode visual config]].
+***** Font Display
+Both mixed pitch and =+org-pretty-mode= are great.
+#+begin_src elisp
+(add-hook 'org-mode-hook #'mixed-pitch-mode)
+(add-hook 'org-mode-hook #'+org-pretty-mode)
+#+end_src
+Headings should be made bigger:
+#+begin_src elisp
+(custom-set-faces!
+  '(outline-1 :weight extra-bold :height 1.25)
+  '(outline-2 :weight bold :height 1.15)
+  '(outline-3 :weight bold :height 1.12)
+  '(outline-4 :weight semi-bold :height 1.09)
+  '(outline-5 :weight semi-bold :height 1.06)
+  '(outline-6 :weight semi-bold :height 1.03)
+  '(outline-8 :weight semi-bold)
+  '(outline-9 :weight semi-bold))
+#+end_src
+and also titles:
+#+begin_src elisp
+(custom-set-faces!
+  '(org-document-title :height 1.2))
+#+end_src
+***** Symbols
+In general, I don't like ligatures in programming languages, however they make reading org mode documents much more pleasing to the eye.
+#+begin_src elisp
+(setq +ligatures-in-modes '(org-mode))
+(setq +ligatures-extras-in-modes '(org-mode))
 #+end_src
 ** Minor
 *** Writeroom
