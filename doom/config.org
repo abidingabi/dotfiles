@@ -183,6 +183,12 @@ Evil snipe is great at quickly getting to something, but only being able to do i
 (setq evil-snipe-scope 'visible
       evil-snipe-repeat-scope 'whole-buffer)
 #+end_src
+*** Git Auto Commit
+Git auto commit is great, but it's even nicer to automatically push to remotes, and write your own summaries.
+#+begin_src elisp
+(setq gac-automatically-push-p t
+      gac-ask-for-summary-p t)
+#+end_src
 * Keybinds
 #+begin_src elisp
 (map! :leader
