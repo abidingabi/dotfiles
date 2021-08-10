@@ -4,33 +4,29 @@
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot.initrd.availableKernelModules =
-    [ "xhci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+    [ "xhci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" "nvme" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = ["boot.shell_on_fail"];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/0d5bb73e-9ec9-420f-a36b-374923267249";
+    device = "/dev/disk/by-label/nixos";
     fsType = "ext4";
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/975C-BEE4";
-    fsType = "vfat";
   };
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/3e6fc11d-f22a-4b50-857c-3b949faf3a66";
+    device = "/dev/disk/by-label/home";
     fsType = "ext4";
   };
 
-  swapDevices = [ ];
+  swapDevices = [{ label = "swap"; }];
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   powerManagement.powertop.enable = true;
   services.tlp.enable = true;
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.device = "/dev/nvme0n1";
 
   networking.hostName = "dansman805-laptop"; # Define your hostname.
 
