@@ -18,13 +18,7 @@
   nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
-
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp3s0.useDHCP = true;
-  networking.interfaces.wlp8s0.useDHCP = true;
 
   # Enable i3wm
   services.xserver.enable = true;

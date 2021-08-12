@@ -50,6 +50,9 @@
   services.printing.drivers =
     [ pkgs.gutenprint pkgs.gutenprintBin pkgs.brlaser ];
 
+  networking.interfaces.enp3s0.useDHCP = true;
+  networking.interfaces.wlp8s0.useDHCP = true;
+
   # Setup steam
   hardware.opengl.driSupport32Bit = true;
   hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];

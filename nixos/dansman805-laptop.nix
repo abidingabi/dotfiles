@@ -34,6 +34,8 @@
 
   services.xserver.libinput.enable = true;
 
+  networking.interfaces.wlp3s0.useDHCP = true;
+
   # Setup steam
   hardware.opengl.driSupport32Bit = true;
   hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
