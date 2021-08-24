@@ -7,7 +7,6 @@
     # GUI applications
     firefox
     google-chrome
-    unstable.nyxt
     discord
     pavucontrol
     xfce.thunar
