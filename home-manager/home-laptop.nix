@@ -27,6 +27,8 @@
       };
 
       "nixpkgs/config.nix".text = "{ allowUnfree = true; }";
+
+      "kitty/kitty.conf".source = ../kitty/kitty.conf;
     };
   };
 }

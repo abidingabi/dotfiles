@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./email.nix ./kitty.nix ];
+  imports = [ ./email.nix ];
 
   home.packages = with pkgs; [
     # GUI applications
@@ -12,6 +12,7 @@
     xfce.thunar
     rpi-imager
     prusa-slicer
+    kitty
 
     # GUI utilities
     flameshot
