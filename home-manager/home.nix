@@ -125,6 +125,11 @@
 
     dawnTime = "6:00-8:00";
     duskTime = "18:00-20:00";
+
+    temperature = {
+      day = 4500;
+      night = 3700;
+    };
   };
 
   fonts.fontconfig.enable = true;
