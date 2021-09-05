@@ -198,6 +198,10 @@ In general, I don't like ligatures in programming languages, however they make r
 #+begin_src elisp
 (setq org-ellipsis "▾")
 #+end_src
+***** Org re-reveal
+#+begin_src elisp
+(setq! org-re-reveal-single-file 't)
+#+end_src
 ** Minor
 *** Writeroom
 Writeroom mode is great for focusing on writing, but is even greater when the cursor stayed vertically centered.
@@ -232,5 +236,4 @@ Git auto commit is great, but it's even nicer to automatically push to remotes, 
 (map! :leader
       :desc "Show top level keybinds"
       "h b T" #'tlk/show)
-
 #+end_src
