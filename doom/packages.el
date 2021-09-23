@@ -65,3 +65,5 @@
            :repo "hugonobrega/top-level-keybinds"))
 
 (package! git-auto-commit-mode)
+
+(package! elpher)
