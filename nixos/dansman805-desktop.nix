@@ -9,6 +9,8 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  hardware.cpu.amd.updateMicrocode = true;
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/2195dfb7-4fc5-470a-8221-395eed5392aa";
     fsType = "ext4";
