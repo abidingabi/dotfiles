@@ -202,6 +202,11 @@ In general, I don't like ligatures in programming languages, however they make r
 #+begin_src elisp
 (setq! org-re-reveal-single-file 't)
 #+end_src
+***** Org Fragtog
+=org-fragtog= automatically toggles inline LaTeX fragments.
+#+begin_src elisp
+(add-hook 'org-mode-hook 'org-fragtog-mode)
+#+end_src
 ** Minor
 *** Writeroom
 Writeroom mode is great for focusing on writing, but is even greater when the cursor stayed vertically centered.
