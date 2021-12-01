@@ -65,5 +65,5 @@
            :repo "hugonobrega/top-level-keybinds"))
 
 (package! git-auto-commit-mode)
-
 (package! org-fragtog)
+(package! literate-calc-mode)
