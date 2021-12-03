@@ -55,6 +55,7 @@
     xorg.xwininfo
     units
     inotify-tools
+    bc
 
     # Command line fun
     fortune
