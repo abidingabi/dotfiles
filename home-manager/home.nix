@@ -104,7 +104,7 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacsPgtkGcc;
+    package = pkgs.emacsUnstable;
     extraPackages = (epkgs: [ epkgs.vterm ]);
   };
   services.emacs.enable = true;
