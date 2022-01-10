@@ -187,12 +187,6 @@ and also titles:
 (custom-set-faces!
   '(org-document-title :height 1.2))
 #+end_src
-and LaTeX fragments:
-#+begin_src elisp
-(after! org
-  (setq org-format-latex-options
-        (plist-put org-format-latex-options :scale 3.0)))
-#+end_src
 ***** Symbols
 In general, I don't like ligatures in programming languages, however they make reading org mode documents nicer.
 #+begin_src elisp
