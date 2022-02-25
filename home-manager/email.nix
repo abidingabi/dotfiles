@@ -13,11 +13,11 @@
   accounts.email = {
     maildirBasePath = ".mail";
 
-    accounts.daniel = {
-      address = "daniel@dgoz.net";
-      userName = "daniel@dgoz.net";
+    accounts.abigail = {
+      address = "abigail@dogbuilt.net";
+      userName = "abigail@dogbuilt.net";
       primary = true;
-      realName = "Daniel Goz";
+      realName = "Abigail";
 
       imap.host = "imap.migadu.com";
       imap.port = 993;
@@ -34,7 +34,7 @@
       mu.enable = true;
 
       passwordCommand =
-        "${pkgs.coreutils}/bin/cat /home/dansman805/.local/share/email/daniel-password";
+        "${pkgs.coreutils}/bin/cat ~/.local/share/email/abigail-password";
     };
   };
 }

@@ -1,6 +1,6 @@
 [user]
-email=daniel@dgoz.net
-name=Daniel Goz
+email=abigail@dogbuilt.net
+name=Abigail
 
 [core]
     excludesfile = ./.gitignore_global
@@ -16,6 +16,6 @@ name=Daniel Goz
 [init]
     defaultBranch = main
 [github]
-    user = dansman805
+    user = abidingabi
 [alias]
     pushf = push --force-with-lease

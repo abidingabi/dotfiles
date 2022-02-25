@@ -3,8 +3,8 @@ Mostly because this makes it easier to organize stuff… If you want a true lite
 * Basic Configuration
 ** Who am I?
 #+begin_src elisp
-(setq user-full-name "Daniel Goz"
-      user-mail-address "daniel@dgoz.net")
+(setq user-full-name "Abigail"
+      user-mail-address "abigail@dogbuilt.net")
 #+end_src
 ** Where are my secrets?
 #+begin_src elisp
@@ -92,12 +92,12 @@ The loadpath needs to be set for mu4e, otherwise it will not launch.
 *** Email Directories
 To handle your email, mu4e needs to know where it is. These paths are relative to =+mu4e-mu4e-mail-path=, which is =~/.mail= by default, and is not set to another value here.
 #+begin_src elisp
-(set-email-account! "daniel"
-  '((mu4e-sent-folder       . "/daniel/Sent")
-    (mu4e-drafts-folder     . "/daniel/Drafts")
-    (mu4e-trash-folder      . "/daniel/Trash")
-    (mu4e-refile-folder     . "/daniel/Archive")
-    (smtpmail-smtp-user     . "daniel@dgoz.net"))
+(set-email-account! "abigail"
+  '((mu4e-sent-folder       . "/abigail/Sent")
+    (mu4e-drafts-folder     . "/abigail/Drafts")
+    (mu4e-trash-folder      . "/abigail/Trash")
+    (mu4e-refile-folder     . "/abigail/Archive")
+    (smtpmail-smtp-user     . "abigail@dogbuilt.net"))
   t)
 #+end_src
 *** Sending Email
