@@ -68,7 +68,7 @@
     cmake
     gradle
     openjdk
-    python38
+    python39Full poetry
     nixfmt
     zig
     nodejs
