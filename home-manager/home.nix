@@ -13,6 +13,9 @@
     rpi-imager
     prusa-slicer
     kitty
+    gimp
+    arandr
+    audacity
 
     # GUI utilities
     flameshot
@@ -22,6 +25,7 @@
     copyq
     scrcpy
     peek
+    mpv
 
     # Games
     minecraft
@@ -56,6 +60,8 @@
     units
     inotify-tools
     bc
+    whois
+    htop
 
     # Command line fun
     fortune
