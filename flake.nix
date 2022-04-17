@@ -33,17 +33,17 @@
         ];
       };
 
-      dansman805-laptop = nixpkgs.lib.nixosSystem {
+      abidingabi-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          ./nixos/dansman805-laptop.nix
+          ./nixos/abidingabi-laptop.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.dansman805 =
+            home-manager.users.abidingabi =
               import ./home-manager/home-laptop.nix;
           }
           ({ pkgs, ... }: {

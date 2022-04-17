@@ -28,7 +28,7 @@
 
   boot.loader.grub.device = "/dev/nvme0n1";
 
-  networking.hostName = "dansman805-laptop"; # Define your hostname.
+  networking.hostName = "abidingabi-laptop"; # Define your hostname.
 
   time.timeZone = "America/New_York";
 

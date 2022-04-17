@@ -41,7 +41,7 @@
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.dansman805 = {
+  users.users.abidingabi = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkManager" ]; # Enable ‘sudo’ for the user.
   };
