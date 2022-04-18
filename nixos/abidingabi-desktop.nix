@@ -35,7 +35,7 @@
 
   boot.loader.grub.device = "/dev/sda";
 
-  networking.hostName = "dansman805-desktop"; # Define your hostname.
+  networking.hostName = "abidingabi-desktop"; # Define your hostname.
 
   time.timeZone = "America/New_York";
 

@@ -8,17 +8,17 @@
 
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, emacs-overlay, ... }: {
     nixosConfigurations = {
-      dansman805-desktop = nixpkgs.lib.nixosSystem {
+      abidingabi-desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          ./nixos/dansman805-desktop.nix
+          ./nixos/abidingabi-desktop.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.dansman805 =
+            home-manager.users.abidingabi =
               import ./home-manager/home-desktop.nix;
           }
 
