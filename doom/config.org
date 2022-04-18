@@ -87,7 +87,7 @@ Mu4e is a nice email client, so let's use that.
 
 The loadpath needs to be set for mu4e, otherwise it will not launch.
 #+begin_src elisp
-(add-load-path! "/etc/profiles/per-user/dansman805/share/emacs/site-lisp/mu4e")
+(add-load-path! "/etc/profiles/per-user/abidingabi/share/emacs/site-lisp/mu4e")
 #+end_src
 *** Email Directories
 To handle your email, mu4e needs to know where it is. These paths are relative to =+mu4e-mu4e-mail-path=, which is =~/.mail= by default, and is not set to another value here.
@@ -104,7 +104,7 @@ To handle your email, mu4e needs to know where it is. These paths are relative t
 Sending email is nice too.
 #+begin_src elisp
 (after! mu4e
-  (setq sendmail-program "/etc/profiles/per-user/dansman805/bin/msmtp"
+  (setq sendmail-program "/etc/profiles/per-user/abidingabi/bin/msmtp"
         send-mail-function #'smtpmail-send-it
         message-sendmail-f-is-evil t
         message-sendmail-extra-arguments '("--read-envelope-from")
