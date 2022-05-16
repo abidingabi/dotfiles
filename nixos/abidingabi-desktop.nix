@@ -65,7 +65,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "0 * * * *      root      rdiff-backup -v5 --exclude /home/abidingabi/.cache /home/abidingabi /backup/home/ && rdiff-backup --remove-older-than 2W /backup/home > /tmp/backup.log"
+      "0 3 * * *      root      rdiff-backup -v5 --exclude /home/abidingabi/.cache /home/abidingabi /backup/home/ && rdiff-backup --remove-older-than 2W /backup/home > /tmp/backup.log"
     ];
   };
 }
