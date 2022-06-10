@@ -29,7 +29,6 @@
 
     # Games
     minecraft
-    multimc
 
     # Command line utilities
     coreutils
