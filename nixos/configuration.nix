@@ -65,6 +65,7 @@
 
   services.picom.enable = true;
   services.earlyoom.enable = true;
+  services.ratbagd.enable = true;
 
   # Map CapsLock to Esc on single press and Ctrl on when used with multiple keys.
   services.interception-tools = {

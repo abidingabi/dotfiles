@@ -26,6 +26,7 @@
     scrcpy
     peek
     mpv
+    piper
 
     # Games
     minecraft
