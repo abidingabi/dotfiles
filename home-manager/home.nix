@@ -16,6 +16,7 @@
     gimp
     arandr
     audacity
+    calibre
 
     # GUI utilities
     flameshot
