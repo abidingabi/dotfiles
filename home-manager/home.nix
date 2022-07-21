@@ -67,6 +67,7 @@
     # Command line fun
     fortune
     cowsay
+    bottom-rs
 
     # Compilers/programming language stuff
     clang
