@@ -46,7 +46,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.abidingabi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkManager" ];
+    extraGroups = [ "wheel" "networkManager" ]; # Enable ‘sudo’ for the user.
   };
 
   programs.fish.enable = true;
@@ -78,9 +78,6 @@
             EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
     '';
   };
-
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "abidingabi" ];
 
   system.stateVersion = "20.09"; # Did you read the comment?
 }
