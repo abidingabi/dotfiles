@@ -80,6 +80,7 @@
     nixfmt
     zig
     nodejs
+    gnuapl
 
     # LaTeX
     (texlive.combine {

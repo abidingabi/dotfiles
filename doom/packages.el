@@ -49,6 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! jq-mode)
+(package! gnu-apl-mode)
 
 (package! screenshot
   :recipe (:host github :repo "tecosaur/screenshot"))
