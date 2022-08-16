@@ -113,7 +113,7 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacsUnstable;
+    package = pkgs.emacsNativeComp;
     extraPackages = (epkgs: [ epkgs.vterm ]);
   };
   services.emacs.enable = true;
