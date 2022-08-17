@@ -97,7 +97,7 @@
 
     # IDEs
     jetbrains.idea-community
-    android-studio
+    androidStudioPackages.beta
 
     # Fonts
     fira
