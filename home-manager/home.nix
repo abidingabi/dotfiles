@@ -63,6 +63,7 @@
     bc
     whois
     htop
+    visidata
 
     # Command line fun
     fortune
