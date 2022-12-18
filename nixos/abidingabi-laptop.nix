@@ -8,7 +8,10 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = ["boot.shell_on_fail"];
+  boot.kernelParams = ["boot.shell_on_fail" "i915.force_probe=46a6" ];
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
@@ -20,21 +23,16 @@
     fsType = "ext4";
   };
 
-  swapDevices = [{ label = "swap"; }];
-
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   powerManagement.powertop.enable = true;
   services.tlp.enable = true;
 
-  boot.loader.grub.device = "/dev/nvme0n1";
-
   networking.hostName = "abidingabi-laptop"; # Define your hostname.
+  networking.interfaces.wlp1s0.useDHCP = true;
 
   time.timeZone = "America/New_York";
 
   services.xserver.libinput.enable = true;
-
-  networking.interfaces.wlp3s0.useDHCP = true;
 
   # Setup steam
   hardware.opengl.driSupport32Bit = true;
