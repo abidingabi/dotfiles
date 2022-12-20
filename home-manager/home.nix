@@ -64,6 +64,7 @@
     whois
     htop
     visidata
+    sshuttle
 
     # Command line fun
     fortune
