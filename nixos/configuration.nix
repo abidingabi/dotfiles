@@ -8,7 +8,7 @@
   boot.kernel.sysctl = { "kernel.sysrq" = 1; };
 
   nix = {
-    autoOptimiseStore = true;
+    settings.auto-optimise-store = true;
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes

@@ -3,6 +3,8 @@
 {
   imports = [ ./email.nix ];
 
+  home.stateVersion = "20.09";
+
   home.packages = with pkgs; [
     # GUI applications
     firefox
@@ -78,7 +80,7 @@
     cmake
     gradle
     openjdk
-    python39Full poetry
+    python3Full python3Packages.poetry
     nixfmt
     zig
     nodejs
