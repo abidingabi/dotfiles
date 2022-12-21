@@ -23,7 +23,7 @@
     # GUI utilities
     flameshot
     rofi
-    i3status-rust i3lock xss-lock
+    i3status-rust i3lock-fancy-rapid xss-lock
     feh
     copyq
     scrcpy
