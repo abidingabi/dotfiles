@@ -5,12 +5,20 @@
 
   boot.kernelPackages = pkgs.linuxPackages_6_0;
 
-  boot.initrd.availableKernelModules =
-    [ "xhci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" "nvme" ];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "ahci"
+    "usb_storage"
+    "sd_mod"
+    "sr_mod"
+    "rtsx_pci_sdmmc"
+    "nvme"
+  ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = ["boot.shell_on_fail" "i915.force_probe=46a6" ];
+  boot.kernelParams =
+    [ "boot.shell_on_fail" "i915.force_probe=46a6" "i915.enable_psr=0" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
