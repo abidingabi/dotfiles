@@ -1,7 +1,12 @@
 set -x EDITOR "vim"
-set -x VISUAL "emacsclient -c"
+set -x VISUAL emacsclient -c
 
 # Convenience functions
+function ve
+    $VISUAL $argv &
+    disown
+end
+
 function upload_file
 	curl http://0x0.st -F'file=@'$argv
 end
