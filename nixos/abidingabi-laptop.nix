@@ -44,6 +44,9 @@
 
   services.xserver.libinput.enable = true;
 
+  users.extraGroups.vboxusers.members = [ "abidingabi" ];
+  virtualisation.virtualbox.host.enable = true;
+
   # Setup steam
   hardware.opengl.driSupport32Bit = true;
   hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
