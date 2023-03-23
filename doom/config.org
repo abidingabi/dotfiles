@@ -82,6 +82,17 @@ Elfeed is a nice rss reader, however I'd like it to pull from feeds whenever it 
 #+begin_src elisp
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 #+end_src
+
+I'd also like to use =elfeed-protocol= to sync with an rss server.
+#+begin_src elisp
+(elfeed-protocol-enable)
+(setq elfeed-use-curl t)
+(setq elfeed-protocol-enabled-protocols '(fever))
+
+(setq elfeed-feeds '(("fever+https://abidingabi@rss.dogbuilt.net"
+                      :api-url "https://rss.dogbuilt.net/fever/"
+                      :use-authinfo t)))
+#+end_src
 ** Email
 Mu4e is a nice email client, so let's use that.
 
