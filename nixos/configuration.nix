@@ -20,6 +20,14 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
 
+  # Setup tailscale
+  services.tailscale.enable = true;
+  networking.firewall = {
+    checkReversePath = "loose";
+    trustedInterfaces = [ "tailscale0" ];
+    allowedUDPPorts = [ config.services.tailscale.port ];
+  };
+
   # Enable i3wm
   services.xserver.enable = true;
   services.xserver.displayManager.lightdm.enable = true;

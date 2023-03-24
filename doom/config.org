@@ -89,8 +89,8 @@ I'd also like to use =elfeed-protocol= to sync with an rss server.
 (setq elfeed-use-curl t)
 (setq elfeed-protocol-enabled-protocols '(fever))
 
-(setq elfeed-feeds '(("fever+https://abidingabi@rss.dogbuilt.net"
-                      :api-url "https://rss.dogbuilt.net/fever/"
+(setq elfeed-feeds '(("fever+http://abidingabi@rss.priv.dogbuilt.net"
+                      :api-url "http://rss.priv.dogbuilt.net/fever/"
                       :use-authinfo t)))
 #+end_src
 ** Email
