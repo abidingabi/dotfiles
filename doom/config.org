@@ -59,7 +59,7 @@ Fira Mono is an excellent monospace font, and Overpass is a nice proportional on
 Doom's text logo on the splashscreen is nice, but it'd be nicer with a cute demon from [[https://github.com/jeetelongname/doom-banners]].
 [[file:cute-demon.png]]
 #+begin_src elisp
-(setq fancy-splash-image "~/dotfiles/doom/cute-demon.png")
+(setq fancy-splash-image "~/.config/doom/cute-demon.png")
 #+end_src
 ** Line Numbers
 I used to use relative line numbers, but then I realized I never actually use them, so now I use normal line numbers.
