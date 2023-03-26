@@ -3,6 +3,8 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
+  boot.kernelPackages = pkgs.linuxPackages_6_1;
+
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
