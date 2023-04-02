@@ -68,4 +68,3 @@
 (package! git-auto-commit-mode)
 (package! org-fragtog)
 (package! literate-calc-mode)
-(package! elfeed-protocol)
