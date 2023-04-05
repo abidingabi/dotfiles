@@ -34,8 +34,8 @@
   };
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-  powerManagement.powertop.enable = true;
   services.thermald.enable = true;
+  services.tlp.enable = true;
 
   networking.hostName = "abidingabi-laptop"; # Define your hostname.
   networking.interfaces.wlp1s0.useDHCP = true;
