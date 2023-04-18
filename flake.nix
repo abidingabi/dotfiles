@@ -31,6 +31,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/abidingabi-laptop.nix
+          ./nixos/restic.nix
 
           home-manager.nixosModules.home-manager
           {
