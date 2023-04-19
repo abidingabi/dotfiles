@@ -113,6 +113,7 @@
     noto-fonts-extra
     noto-fonts-emoji
     noto-fonts-emoji-blob-bin
+    emacs-all-the-icons-fonts
   ];
 
   programs.emacs = {
