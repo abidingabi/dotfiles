@@ -15,7 +15,6 @@
     extraBackupArgs = [
       "--exclude=/home/abidingabi/.cache/*"
       "--exclude=/home/abidingabi/Android/*"
-      "--exclude=/home/abidingabi/virtualbox-vms/*"
     ];
 
     pruneOpts = [ "--keep-daily 7" "--keep-weekly 4" "--keep-yearly 10" ];
