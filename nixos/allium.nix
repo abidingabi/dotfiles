@@ -37,7 +37,7 @@
   services.thermald.enable = true;
   services.tlp.enable = true;
 
-  networking.hostName = "abidingabi-laptop"; # Define your hostname.
+  networking.hostName = "allium"; # Define your hostname.
   networking.interfaces.wlp1s0.useDHCP = true;
 
   time.timeZone = "America/New_York";

@@ -8,11 +8,11 @@
 
   outputs = { nixpkgs, home-manager, emacs-overlay, ... }: {
     nixosConfigurations = {
-      abidingabi-desktop = nixpkgs.lib.nixosSystem {
+      orchid = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          ./nixos/abidingabi-desktop.nix
+          ./nixos/orchid.nix
 
           home-manager.nixosModules.home-manager
           {
@@ -29,11 +29,11 @@
         ];
       };
 
-      abidingabi-laptop = nixpkgs.lib.nixosSystem {
+      allium = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          ./nixos/abidingabi-laptop.nix
+          ./nixos/allium.nix
           ./nixos/restic.nix
 
           home-manager.nixosModules.home-manager
