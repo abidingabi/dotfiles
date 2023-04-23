@@ -18,13 +18,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.abidingabi =
-              import ./home-manager/home-desktop.nix;
+            home-manager.users.abi = import ./home-manager/home-desktop.nix;
           }
 
-          {
-            nix.registry.nixpkgs.flake = nixpkgs;
-          }
+          { nix.registry.nixpkgs.flake = nixpkgs; }
           ({ pkgs, ... }: { nixpkgs.overlays = [ emacs-overlay.overlay ]; })
         ];
       };
@@ -40,13 +37,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.abidingabi =
-              import ./home-manager/home-laptop.nix;
+            home-manager.users.abi = import ./home-manager/home-laptop.nix;
           }
 
-          {
-            nix.registry.nixpkgs.flake = nixpkgs;
-          }
+          { nix.registry.nixpkgs.flake = nixpkgs; }
           ({ pkgs, ... }: { nixpkgs.overlays = [ emacs-overlay.overlay ]; })
         ];
       };

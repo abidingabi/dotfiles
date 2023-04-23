@@ -44,7 +44,7 @@
 
   services.xserver.libinput.enable = true;
 
-  users.extraGroups.vboxusers.members = [ "abidingabi" ];
+  users.extraGroups.vboxusers.members = [ "abi" ];
   virtualisation.virtualbox.host.enable = true;
 
   # Setup steam

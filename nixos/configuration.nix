@@ -58,7 +58,7 @@
   hardware.bluetooth.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.abidingabi = {
+  users.users.abi = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkManager" ]; # Enable ‘sudo’ for the user.
   };
