@@ -1,0 +1,67 @@
+#+title: Scratch
+
+├── doom
+│   ├── config.org
+│   ├── cute-demon.png
+│   ├── init.el
+│   └── packages.el
+├── fish
+│   ├── config.fish
+│   └── functions
+│       ├── fish_greeting.fish
+│       └── fish_prompt.fish
+├── flake.lock
+├── flake.nix
+├── git
+│   └── config
+├── home-manager
+│   ├── email.nix
+│   ├── home-desktop.nix
+│   ├── home-laptop.nix
+│   └── home.nix
+├── i3
+│   └── config
+├── kitty
+│   └── kitty.conf
+├── nixos
+│   ├── abidingabi-desktop.nix
+│   ├── abidingabi-laptop.nix
+│   └── restic.nix
+├── README.md
+└── rofi
+    ├── bala.rasi
+    └── config
+
+- devices/
+  - allium.nix (laptop)
+  - orchid.nix (desktop)
+  - lily.nix?? (vps)
+  - poppy.nix (vm)
+  - base.nix
+- applications/
+  - emacs/
+    - emacs.nix
+    - doom/*
+  - fish.nix
+  - git.nix
+  - kitty.nix
+- services/
+  - backup.nix
+  - email.nix
+  - gui.nix (sway, login manager)
+  - ssh.nix??
+  - web-server.nix??
+  - wireless-connectivity.nix
+
+
+#+begin_src conf
+bindsym $mod+e exec "emacsclient -c"
+
+# Configure firefox picture-in-picture
+for_window [title="Picture-in-Picture"] \
+    sticky enable, border none, resize set 480 270, move position 2050 650
+
+# Wallpaper
+exec_always "FractalArt --no-bg -f /dev/stdout \
+    | feh --bg-fill --no-fehbg --no-xinerama -" |
+#+end_src

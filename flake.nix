@@ -6,44 +6,17 @@
     emacs-overlay.url = "github:nix-community/emacs-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, emacs-overlay, ... }: {
-    nixosConfigurations = {
-      orchid = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./nixos/configuration.nix
-          ./nixos/orchid.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.abi = import ./home-manager/home-desktop.nix;
-          }
-
-          { nix.registry.nixpkgs.flake = nixpkgs; }
-          ({ pkgs, ... }: { nixpkgs.overlays = [ emacs-overlay.overlay ]; })
-        ];
-      };
-
-      allium = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./nixos/configuration.nix
-          ./nixos/allium.nix
-          ./nixos/restic.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.abi = import ./home-manager/home-laptop.nix;
-          }
-
-          { nix.registry.nixpkgs.flake = nixpkgs; }
-          ({ pkgs, ... }: { nixpkgs.overlays = [ emacs-overlay.overlay ]; })
-        ];
-      };
-    };
-  };
+  outputs = inputs:
+    let
+      mkSystem = system: hostName:
+        inputs.nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./devices/base.nix
+            ./devices/${hostName}.nix
+            { networking.hostName = hostName; }
+          ];
+          specialArgs = { inherit inputs; };
+        };
+    in { nixosConfigurations = { poppy = mkSystem "x86_64-linux" "poppy"; }; };
 }
