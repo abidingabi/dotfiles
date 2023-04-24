@@ -5,11 +5,6 @@
 │   ├── cute-demon.png
 │   ├── init.el
 │   └── packages.el
-├── fish
-│   ├── config.fish
-│   └── functions
-│       ├── fish_greeting.fish
-│       └── fish_prompt.fish
 ├── flake.lock
 ├── flake.nix
 ├── git
