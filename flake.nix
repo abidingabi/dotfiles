@@ -18,5 +18,9 @@
           ];
           specialArgs = { inherit inputs; };
         };
-    in { nixosConfigurations = { poppy = mkSystem "x86_64-linux" "poppy"; }; };
+    in {
+      nixosConfigurations = {
+        poppy = mkSystem "x86_64-linux" "poppy"; # a graphical vm
+      };
+    };
 }

@@ -21,9 +21,6 @@
 │   ├── abidingabi-laptop.nix
 │   └── restic.nix
 ├── README.md
-└── rofi
-    ├── bala.rasi
-    └── config
 
 - devices/
   - allium.nix (laptop)

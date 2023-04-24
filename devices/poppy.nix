@@ -1,6 +1,5 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ modulesPath, ... }:
 
-# To be used with nixos-rebuild build-vm
 {
   imports = [
     (modulesPath + "/virtualisation/qemu-vm.nix")
@@ -8,8 +7,10 @@
     ../services/gui.nix
     ../services/tailscale.nix
 
-    ../applications/kitty.nix
     ../applications/fish.nix
+    ../applications/git.nix
+
+    ../applications/kitty.nix
   ];
 
   system.stateVersion = "22.11";

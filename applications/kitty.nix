@@ -1,5 +1,3 @@
-{ config, lib, pkgs, ... }:
-
 {
   hmModules = [{
     programs.kitty = {
