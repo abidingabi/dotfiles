@@ -21,8 +21,6 @@
 │   └── home.nix
 ├── i3
 │   └── config
-├── kitty
-│   └── kitty.conf
 ├── nixos
 │   ├── abidingabi-desktop.nix
 │   ├── abidingabi-laptop.nix

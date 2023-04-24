@@ -7,6 +7,9 @@
 
     ../services/gui.nix
     ../services/tailscale.nix
+
+    ../applications/kitty.nix
+    ../applications/fish.nix
   ];
 
   system.stateVersion = "22.11";

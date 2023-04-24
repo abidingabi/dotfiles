@@ -8,7 +8,7 @@ in {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.${username} = { imports = config.hmModules;  };
+      home-manager.users.${username} = { imports = config.hmModules; };
     }
   ];
 

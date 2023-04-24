@@ -52,6 +52,16 @@
           grim # needed for flameshot
 
           wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+
+          # fonts
+          fira-mono
+          overpass
+          noto-fonts
+          noto-fonts-cjk
+          noto-fonts-extra
+          noto-fonts-emoji
+          noto-fonts-emoji-blob-bin
+          emacs-all-the-icons-fonts # used for emacs and i3status-rust
         ];
       }
       # sway configuration
