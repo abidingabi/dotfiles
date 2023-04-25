@@ -7,6 +7,7 @@
     ../services/gui.nix
     ../services/tailscale.nix
 
+    ../applications/emacs/emacs.nix
     ../applications/fish.nix
     ../applications/git.nix
 

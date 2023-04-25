@@ -51,6 +51,8 @@
           xdg-desktop-portal-wlr
           grim # needed for flameshot
 
+          flameshot
+          copyq
           wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
 
           # fonts
@@ -64,8 +66,9 @@
           emacs-all-the-icons-fonts # used for emacs and i3status-rust
         ];
       }
+
       # sway configuration
-      ({ lib, ... }: {
+      ({ config, lib, ... }: {
         wayland.windowManager.sway = {
           enable = true;
           config = {
@@ -80,6 +83,8 @@
                   datadir = "${schema}/share/gsettings-schemas/${schema.name}";
                 in "export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS && gnome_schema=org.gnome.desktop.interface && gsettings set $gnome_schema gtk-theme 'Adwaita'";
               }
+
+              { command = "copyq show"; }
             ];
 
             modifier = "Mod4";
@@ -93,19 +98,24 @@
               accel_profile = "flat";
             };
 
-            keybindings = let modifier = "Mod4";
-            in lib.mkOptionDefault {
-              "${modifier}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox";
-              "${modifier}+Shift+s" =
-                "exec ${pkgs.flameshot}/bin/flameshot gui";
-              "${modifier}+Shift+v" = "exec ${pkgs.copyq}/bin/copyq show";
-              "${modifier}+d" =
-                "exec ${pkgs.rofi-wayland}/bin/rofi -modi drun -show drun";
-            };
+            keybindings =
+              let modifier = config.wayland.windowManager.sway.config.modifier;
+              in lib.mkOptionDefault {
+                "${modifier}+Shift+Return" = "exec firefox";
+                "${modifier}+Shift+s" = "exec flameshot gui";
+                "${modifier}+Shift+v" = "exec copyq show";
+                "${modifier}+d" = "exec rofi -modi drun -show drun";
+                "${modifier}+e" = "exec emacsclient -c";
+              };
 
             bars = [{
               statusCommand =
                 "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-${barName}.toml";
+            }];
+
+            window.commands = [{
+              command = "floating enable";
+              criteria = { class = "copyq"; };
             }];
           };
         };
