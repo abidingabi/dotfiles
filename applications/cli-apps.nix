@@ -1,0 +1,35 @@
+{
+  hmModules = [{
+    home.packages = with pkgs; [
+      androidStudioPackages.beta
+      appimage-run
+      bat
+      bc
+      coreutils
+      fd
+      ffmpeg
+      fzf
+      git-lfs
+      gitAndTools.gh
+      htop
+      imagemagick
+      jetbrains.idea-community
+      jq
+      p7zip
+      pandoc
+      ripgrep
+      ripgrep-all
+      tealdeer
+      trash-cli
+      tree
+      units
+      unzip
+      visidata
+      whois
+      xclip
+      xdotool
+      xorg.xwininfo
+      zip
+    ];
+  }];
+}

@@ -1,25 +1,10 @@
 #+title: Scratch
 
-├── doom
-│   ├── config.org
-│   ├── cute-demon.png
-│   ├── init.el
-│   └── packages.el
 ├── flake.lock
 ├── flake.nix
-├── git
-│   └── config
-├── home-manager
-│   ├── email.nix
-│   ├── home-desktop.nix
-│   ├── home-laptop.nix
-│   └── home.nix
-├── i3
-│   └── config
 ├── nixos
 │   ├── abidingabi-desktop.nix
 │   ├── abidingabi-laptop.nix
-│   └── restic.nix
 ├── README.md
 
 - devices/

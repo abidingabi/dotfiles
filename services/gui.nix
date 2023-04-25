@@ -65,6 +65,8 @@
           noto-fonts-emoji-blob-bin
           emacs-all-the-icons-fonts # used for emacs and i3status-rust
         ];
+
+        fonts.fontconfig.enable = true;
       }
 
       # sway configuration
@@ -168,6 +170,16 @@
           cycle = false;
           theme = "sidebar";
           extraConfig = { width = 400; };
+        };
+      }
+
+      {
+        services.dunst.enable = true;
+        services.dunst.settings = {
+          global = {
+            transparency = 10;
+            geometry = "700-30+20";
+          };
         };
       }
     ];
