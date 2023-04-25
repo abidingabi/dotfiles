@@ -23,7 +23,8 @@
         };
     in {
       nixosConfigurations = {
-        poppy = mkSystem "x86_64-linux" "poppy"; # a graphical vm
+        allium = mkSystem "x86_64-linux" "allium"; # a graphical vm
+        poppy = mkSystem "x86_64-linux" "poppy"; # a laptop
       };
     };
 }

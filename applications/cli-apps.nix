@@ -1,8 +1,8 @@
+{ pkgs, ... }:
+
 {
   hmModules = [{
     home.packages = with pkgs; [
-      androidStudioPackages.beta
-      appimage-run
       bat
       bc
       coreutils
@@ -13,7 +13,6 @@
       gitAndTools.gh
       htop
       imagemagick
-      jetbrains.idea-community
       jq
       p7zip
       pandoc

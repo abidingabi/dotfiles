@@ -8,9 +8,7 @@
 
       ignores = [ "*~" "*.swp" ".envrc" ];
 
-      aliases = {
-        pushf = "push --force-with-lease";
-      };
+      aliases = { pushf = "push --force-with-lease"; };
 
       extraConfig = {
         merge.ff = "only";
