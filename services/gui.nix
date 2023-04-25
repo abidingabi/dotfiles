@@ -9,6 +9,8 @@
   in {
     services.xserver.enable = true;
     services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.libinput.enable = true;
+    services.xserver.libinput.mouse.accelProfile = "flat";
 
     # keyboard options (redefined for sway in sway configuration)
     services.xserver.layout = "us,us";
@@ -110,7 +112,17 @@
                 "${modifier}+e" = "exec emacsclient -c";
               };
 
+            fonts = {
+              names = [ "Fira Mono" ];
+              size = 10.0;
+            };
+
             bars = [{
+              fonts = {
+                names = [ "Fira Mono" ];
+                size = 10.0;
+              };
+
               statusCommand =
                 "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-${barName}.toml";
             }];
