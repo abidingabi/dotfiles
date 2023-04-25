@@ -11,20 +11,24 @@
 
   outputs = inputs:
     let
-      mkSystem = system: hostName:
+      mkSystem = system: stateVersion: hostName:
         inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
             ./devices/base.nix
             ./devices/${hostName}.nix
-            { networking.hostName = hostName; }
+            {
+              networking.hostName = hostName;
+              system.stateVersion = stateVersion;
+              hmModules = [{ home.stateVersion = stateVersion; }];
+            }
           ];
           specialArgs = { inherit inputs; };
         };
     in {
       nixosConfigurations = {
-        allium = mkSystem "x86_64-linux" "allium"; # a graphical vm
-        poppy = mkSystem "x86_64-linux" "poppy"; # a laptop
+        allium = mkSystem "x86_64-linux" "20.09" "allium"; # a graphical vm
+        poppy = mkSystem "x86_64-linux" "22.11" "poppy"; # a laptop
       };
     };
 }

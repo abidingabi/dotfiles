@@ -14,9 +14,6 @@
     ../applications/kitty.nix
   ];
 
-  system.stateVersion = "22.11";
-  hmModules = [{ home.stateVersion = "22.11"; }];
-
   virtualisation.qemu.options = [ "-vga qxl" ];
 
   # I like being able to log into my vms

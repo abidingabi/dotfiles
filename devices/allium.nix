@@ -18,12 +18,9 @@
     ../applications/virtualbox.nix
   ];
 
-  system.stateVersion = "20.09";
-  hmModules = [{ home.stateVersion = "20.09"; }];
-
   dogbuilt.services.gui.laptopFeatures.enable = true;
 
-  # Hardware config
+  # hardware config
   hardware.enableRedistributableFirmware = true;
 
   boot.kernelPackages = pkgs.linuxPackages_6_1;
