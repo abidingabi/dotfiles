@@ -8,7 +8,7 @@
   config = let barName = "default";
   in {
     services.xserver.enable = true;
-    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.displayManager.sddm.enable = true;
     services.xserver.libinput.enable = true;
     services.xserver.libinput.mouse.accelProfile = "flat";
 
