@@ -32,7 +32,10 @@ in {
       };
     };
 
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs = {
+      config.allowUnfree = true;
+      overlays = [ specialArgs.inputs.emacs-overlay.overlay ];
+    };
 
     # Basic useful packages
     environment.systemPackages = with pkgs; [ git vim wget ];
