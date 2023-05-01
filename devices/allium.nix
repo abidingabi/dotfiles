@@ -3,7 +3,7 @@
 {
   imports = [
     ../services/email.nix
-    ../services/gui.nix
+    ../services/gui/gui.nix
     ../services/restic.nix
     ../services/wireless-connectivity.nix
 

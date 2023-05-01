@@ -102,6 +102,10 @@
               accel_profile = "flat";
             };
 
+            output."*" = {
+              background = "${./xenia-outline.png} center #606060";
+            };
+
             keybindings =
               let modifier = config.wayland.windowManager.sway.config.modifier;
               in lib.mkOptionDefault {
