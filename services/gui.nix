@@ -6,7 +6,6 @@
   services.xserver.libinput.enable = true;
   services.xserver.libinput.mouse.accelProfile = "flat";
 
-  # keyboard options (redefined for sway in sway configuration)
   services.xserver.layout = "us,us";
   services.xserver.xkbVariant = "colemak,";
   services.xserver.xkbOptions = "grp:rctrl_toggle";
