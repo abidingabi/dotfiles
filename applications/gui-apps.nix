@@ -19,6 +19,7 @@
       # GUI utilities
       appimage-run
       mpv
+      peek
     ];
   }];
 }
