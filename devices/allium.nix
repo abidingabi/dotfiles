@@ -5,6 +5,7 @@
     ../services/email.nix
     ../services/gui.nix
     ../services/restic.nix
+    ../services/tailscale.nix
     ../services/wireless-connectivity.nix
 
     ../applications/cli-apps.nix
