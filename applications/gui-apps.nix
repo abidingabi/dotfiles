@@ -14,10 +14,10 @@
       kitty
       pavucontrol
       prusa-slicer
-      xfce.thunar
 
       # GUI utilities
       appimage-run
+      flameshot
       mpv
     ];
   }];

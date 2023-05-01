@@ -3,7 +3,7 @@
 {
   imports = [
     ../services/email.nix
-    ../services/gui/gui.nix
+    ../services/gui.nix
     ../services/restic.nix
     ../services/wireless-connectivity.nix
 
@@ -17,8 +17,6 @@
     ../applications/steam.nix
     ../applications/virtualbox.nix
   ];
-
-  dogbuilt.services.gui.laptopFeatures.enable = true;
 
   # hardware config
   hardware.enableRedistributableFirmware = true;
@@ -54,5 +52,5 @@
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   services.thermald.enable = true;
-  services.tlp.enable = true;
+  # services.tlp.enable = true;
 }

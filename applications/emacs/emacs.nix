@@ -20,7 +20,6 @@
 
     programs.emacs = {
       enable = true;
-      package = pkgs.emacsPgtk;
       extraPackages = (epkgs: [ epkgs.vterm ]);
     };
 
