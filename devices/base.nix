@@ -40,6 +40,8 @@ in {
     # Basic services
     services.earlyoom.enable = true;
 
+    time.timeZone = "America/New_York";
+
     users.users.${username} = {
       isNormalUser = true;
       extraGroups = [ "wheel" ]; # Enables sudo
