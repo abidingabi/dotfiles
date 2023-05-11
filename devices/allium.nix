@@ -9,6 +9,7 @@
     ../services/wireless-connectivity.nix
 
     ../applications/cli-apps.nix
+    ../applications/direnv.nix
     ../applications/emacs/emacs.nix
     ../applications/fish.nix
     ../applications/git.nix
