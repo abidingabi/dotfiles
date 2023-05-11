@@ -50,6 +50,7 @@
 ;(unpin! t)
 (package! jq-mode)
 (package! gnu-apl-mode)
+(package! zig-mode)
 
 (package! screenshot
   :recipe (:host github :repo "tecosaur/screenshot"))
