@@ -13,7 +13,6 @@
       gitAndTools.gh
       htop
       imagemagick
-      jq
       p7zip
       pandoc
       ripgrep
@@ -29,6 +28,15 @@
       xdotool
       xorg.xwininfo
       zip
+
+      # programming stuff
+      gcc
+      jq
+      gnumake
+      nixfmt
+
+      poetry
+      python3
     ];
   }];
 }
