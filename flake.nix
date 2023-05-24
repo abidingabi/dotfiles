@@ -24,8 +24,8 @@
         };
     in {
       nixosConfigurations = {
-        allium = mkSystem "x86_64-linux" "20.09" "allium"; # a graphical vm
-        poppy = mkSystem "x86_64-linux" "22.11" "poppy"; # a laptop
+        allium = mkSystem "x86_64-linux" "20.09" "allium"; # a laptop
+        poppy = mkSystem "x86_64-linux" "22.11" "poppy"; # a graphical vm
       };
     };
 }
