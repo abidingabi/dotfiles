@@ -15,6 +15,7 @@
       imagemagick
       p7zip
       pandoc
+      parallel
       ripgrep
       ripgrep-all
       tealdeer
