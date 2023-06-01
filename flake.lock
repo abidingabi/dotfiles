@@ -41,7 +41,28 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "signal-flags": "signal-flags"
+      }
+    },
+    "signal-flags": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1682367857,
+        "narHash": "sha256-jhy74KjaAE7LHfCkPk5jKfyO6aC6LnKEP4jrP+9WsHA=",
+        "owner": "abidingabi",
+        "repo": "signal-flags",
+        "rev": "f6d85a217fd8109d5df571a72389c493d6226585",
+        "type": "github"
+      },
+      "original": {
+        "owner": "abidingabi",
+        "repo": "signal-flags",
+        "type": "github"
       }
     },
     "utils": {
