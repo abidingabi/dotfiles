@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  programs.dconf.enable = true;
+
   hmModules = [{
     home.packages = with pkgs; [
       # GUI applications
