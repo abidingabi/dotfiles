@@ -14,6 +14,11 @@
     ../services/signal-flags.nix
   ];
 
+  # needed to be able to be able to nixos-rebuild with a target-host remotely
+  # without ssh access to root, see
+  # https://github.com/NixOS/nixpkgs/issues/159082#issuecomment-1118968571
+  nix.settings.trusted-users = [ "root" "@wheel" ];
+
   boot.loader.grub.device = "/dev/sda";
   boot.initrd.availableKernelModules =
     [ "ata_piix" "uhci_hcd" "xen_blkfront" "vmw_pvscsi" ];
