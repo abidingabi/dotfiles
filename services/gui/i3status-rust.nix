@@ -6,14 +6,15 @@
       enable = true;
       bars.default = {
         theme = "gruvbox-dark";
-        icons = "awesome";
+        icons = "awesome4";
 
         blocks = let
           laptopBlocks = [
             {
               block = "battery";
+              empty_threshold = 0;
+              full_threshold = 100;
               interval = 10;
-              format = "{percentage}";
               device = "BAT0";
             }
             {
@@ -32,7 +33,7 @@
             {
               block = "time";
               interval = 15;
-              format = "%a, %F %I:%M %p";
+              format = "$timestamp.datetime(f:'%a, %F %I:%M %p')";
             }
           ];
       };

@@ -31,7 +31,7 @@
     fsType = "ext4";
   };
 
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
 
   networking = {

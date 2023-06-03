@@ -3,7 +3,7 @@
 {
   services.openssh = {
     enable = true;
-    passwordAuthentication = false;
+    settings.PasswordAuthentication = false;
   };
 
   users.users.abi.openssh.authorizedKeys.keys = [
