@@ -14,6 +14,8 @@
     ../services/signal-flags.nix
   ];
 
+  dogbuilt.services.tailscale.exitNodeSupport.enable = true;
+
   # needed to be able to be able to nixos-rebuild with a target-host remotely
   # without ssh access to root, see
   # https://github.com/NixOS/nixpkgs/issues/159082#issuecomment-1118968571
