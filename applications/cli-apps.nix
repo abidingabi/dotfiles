@@ -32,9 +32,11 @@
 
       # programming stuff
       gcc
-      jq
       gnumake
       nixfmt
+
+      fq
+      jq
 
       poetry
       python3
