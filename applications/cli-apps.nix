@@ -8,6 +8,7 @@
       coreutils
       fd
       ffmpeg
+      file
       fzf
       git-lfs
       gitAndTools.gh
