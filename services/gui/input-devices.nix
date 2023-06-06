@@ -9,12 +9,15 @@
   services.xserver.xkbVariant = "colemak,";
   services.xserver.xkbOptions = "grp:ctrls_toggle";
 
-  services.keyd = {
+  # map CapsLock to Esc on single press and Ctrl on when used with multiple keys.
+  services.interception-tools = {
     enable = true;
-    settings = {
-      main = {
-        capslock = "overload(control, esc)";
-      };
-    };
+    plugins = [ pkgs.interception-tools-plugins.caps2esc ];
+    udevmonConfig = ''
+      - JOB: "${pkgs.interception-tools}/bin/intercept -g $DEVNODE | ${pkgs.interception-tools-plugins.caps2esc}/bin/caps2esc | ${pkgs.interception-tools}/bin/uinput -d $DEVNODE"
+        DEVICE:
+          EVENTS:
+            EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
+    '';
   };
 }
