@@ -33,7 +33,7 @@
             {
               block = "time";
               interval = 15;
-              format = "$timestamp.datetime(f:'%a, %F %I:%M %p')";
+              format = " $timestamp.datetime(f:'%a, %F %I:%M %p') ";
             }
           ];
       };
