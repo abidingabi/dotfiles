@@ -19,7 +19,7 @@
       copyq
       feh
       flameshot
-      i3lock-fancy-rapid
+      i3lock
       xss-lock
     ];
   }];
