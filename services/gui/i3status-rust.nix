@@ -29,6 +29,7 @@
             {
               block = "sound";
               step_width = 5;
+              format = " $icon  {$volume.eng(w:2) |}";
             }
             {
               block = "time";
