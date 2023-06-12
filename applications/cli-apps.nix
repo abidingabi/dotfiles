@@ -6,6 +6,7 @@
       bat
       bc
       coreutils
+      dig
       fd
       ffmpeg
       file
