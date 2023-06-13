@@ -6,7 +6,14 @@
     programs.fish = {
       enable = true;
 
-      shellInit = "set -x EDITOR 'vim'";
+      shellInit = ''
+        set -x EDITOR 'vim'
+
+        # workaround for https://github.com/kovidgoyal/kitty/issues/713
+        if [ $TERM = "xterm-kitty" ]
+          set TERM "xterm-256color"
+        end
+      '';
 
       functions = {
         fish_greeting = "";
