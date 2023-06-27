@@ -69,3 +69,8 @@
 (package! git-auto-commit-mode)
 (package! org-fragtog)
 (package! literate-calc-mode)
+
+
+(unpin! evil-collection)
+(package! evil-collection
+  :recipe (:repo "emacs-evil/evil-collection" :branch "master"))
