@@ -29,6 +29,7 @@
       nixosConfigurations = {
         allium = mkSystem "x86_64-linux" "20.09" "allium"; # a laptop
         lily = mkSystem "x86_64-linux" "22.05" "lily"; # a vps
+        orchid = mkSystem "x86_64-linux" "20.09" "orchid"; # a desktop
         poppy = mkSystem "x86_64-linux" "22.11" "poppy"; # a graphical vm
       };
     };
