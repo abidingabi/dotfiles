@@ -22,6 +22,9 @@
       appimage-run
       mpv
       peek
+
+      # Games
+      prismlauncher
     ];
   }];
 }
