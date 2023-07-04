@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   hmModules = [{
     programs.git = {
@@ -22,6 +24,12 @@
         init.defaultBranch = "main";
 
         github.user = "abidingabi";
+
+        mailmap.file = toString (pkgs.writeText "mailmap" ''
+          Abigail <abigail@dogbuilt.net>
+          Abigail <abigail@dogbuilt.net> <daniel@dgoz.net>
+          Abigail <abigail@dogbuilt.net> <dansman805@gmail.com>
+        '');
       };
     };
   }];
