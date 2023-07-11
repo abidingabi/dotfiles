@@ -14,13 +14,14 @@
       google-chrome
       jetbrains.idea-community
       kitty
-      pavucontrol
       prusa-slicer
       xfce.thunar
 
       # GUI utilities
       appimage-run
+      arandr
       mpv
+      pavucontrol
       peek
 
       # Games
