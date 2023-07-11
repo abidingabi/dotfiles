@@ -4,6 +4,7 @@
   hmModules = [{
     programs.git = {
       enable = true;
+      lfs.enable = true;
 
       userName = "Abigail";
       userEmail = "abigail@dogbuilt.net";
