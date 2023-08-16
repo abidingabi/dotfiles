@@ -9,7 +9,7 @@
       userName = "Abigail";
       userEmail = "abigail@dogbuilt.net";
 
-      ignores = [ "*~" "*.swp" ".envrc" ];
+      ignores = [ "*~" "*.swp" ];
 
       aliases = { pushf = "push --force-with-lease"; };
 
