@@ -10,14 +10,7 @@
       logtail.enabled = false;
       ip_prefixes = [ "fd7a:115c:a1e0::/48" "100.64.0.0/10" ];
 
-      dns_config = {
-        base_domain = "dogbuilt.net";
-        extra_records = [{
-          name = "rss.priv.dogbuilt.net";
-          type = "A";
-          value = "100.64.0.1";
-        }];
-      };
+      dns_config.base_domain = "dogbuilt.net";
     };
   };
   environment.systemPackages = [ config.services.headscale.package ];

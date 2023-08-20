@@ -1,6 +1,7 @@
-{  ... }:
+{ ... }:
 
-{
+let ip = "100.64.0.1";
+in {
   services.miniflux = {
     enable = true;
 
@@ -11,9 +12,15 @@
       CREATE_ADMIN = "1";
       LISTEN_ADDR = "127.0.0.1:4001";
 
-      AUTH_PROXY_HEADER="X-Webauth-User";
+      AUTH_PROXY_HEADER = "X-Webauth-User";
     };
   };
+
+  services.headscale.settings.dns_config.extra_records = [{
+    name = "rss.priv.dogbuilt.net";
+    type = "A";
+    value = ip;
+  }];
 
   # see https://caddyserver.com/docs/caddyfile/directives/forward_auth#tailscale
   services.caddy.extraConfig = ''
