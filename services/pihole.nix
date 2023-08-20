@@ -11,7 +11,7 @@ in {
     volumes = [ "etc-pihole:/etc/pihole/" "etc-dnsmasq.d:/etc/dnsmasq.d/" ];
     environment = {
       ServerIP = ip;
-      WEBPASSWORD = "password";
+      WEBPASSWORD = "";
     };
     extraOptions = [ "--dns=1.1.1.1" ];
   };
