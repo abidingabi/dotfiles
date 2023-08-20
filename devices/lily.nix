@@ -5,6 +5,7 @@
     (modulesPath + "/profiles/qemu-guest.nix")
 
     ../services/headscale.nix
+    ../services/pihole.nix
     ../services/ssh.nix
     ../services/tailscale.nix
     ../services/web-server.nix
