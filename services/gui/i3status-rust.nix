@@ -20,6 +20,7 @@
             {
               block = "backlight";
               step_width = 5;
+              minimum = 0;
             }
           ];
         in (if config.dogbuilt.services.gui.laptopFeatures.enable then
