@@ -5,7 +5,7 @@
     laptopFeatures.enable = lib.mkEnableOption "laptop features";
   };
 
-  imports = [ ./fonts.nix ./i3.nix ./input-devices.nix ./redshift.nix ];
+  imports = [ ./fonts.nix ./i3.nix ./input-devices.nix ];
 
   config = {
     services.xserver.enable = true;
