@@ -37,9 +37,6 @@ in {
     # Basic useful packages
     environment.systemPackages = with pkgs; [ git vim wget ];
 
-    # Basic services
-    services.earlyoom.enable = true;
-
     time.timeZone = "America/New_York";
 
     users.users.${username} = {
