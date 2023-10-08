@@ -31,6 +31,10 @@
           Abigail <abigail@dogbuilt.net> <daniel@dgoz.net>
           Abigail <abigail@dogbuilt.net> <dansman805@gmail.com>
         '');
+
+        gpg.format = "ssh";
+        user.signingkey = "/home/abi/.ssh/id_ed25519";
+        commit.gpgsign = true;
       };
     };
   }];
