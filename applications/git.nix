@@ -33,7 +33,7 @@
         '');
 
         gpg.format = "ssh";
-        user.signingkey = "/home/abi/.ssh/id_ed25519";
+        user.signingkey = "/home/abi/.ssh/id_ed25519.pub";
         commit.gpgsign = true;
       };
     };
