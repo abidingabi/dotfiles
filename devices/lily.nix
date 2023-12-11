@@ -36,7 +36,7 @@
 
   networking = {
     interfaces.enp1s0.ipv6.addresses = [{
-      address = "2a01:4ff:f0:bb04::/64";
+      address = "2a01:4ff:f0:bb04::";
       prefixLength = 64;
     }];
     defaultGateway6 = {
