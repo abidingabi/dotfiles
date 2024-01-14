@@ -1,4 +1,4 @@
-{ modulesPath, specialArgs, ... }:
+{ modulesPath, ... }:
 
 {
   imports = [

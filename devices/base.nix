@@ -1,10 +1,10 @@
-{ config, lib, pkgs, specialArgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let username = "abi";
 in {
   # Set up home manager
   imports = [
-    specialArgs.inputs.home-manager.nixosModules.home-manager
+    inputs.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
@@ -24,7 +24,7 @@ in {
     nix = {
       # Enables e.g. nix shell to run faster by using system's nixpkgs registry
       # instead of downloading it every time
-      registry.nixpkgs.flake = specialArgs.inputs.nixpkgs;
+      registry.nixpkgs.flake = inputs.nixpkgs;
 
       settings = {
         auto-optimise-store = true;
