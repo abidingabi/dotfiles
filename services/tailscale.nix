@@ -1,28 +1,17 @@
-{ pkgs, config, lib, ... }:
+{ pkgs-unstable, config, lib, ... }:
 
 {
   services.tailscale = {
     enable = true;
-
-    # Builds support for nginx-auth, see https://github.com/NixOS/nixpkgs/issues/227380.
-    package = pkgs.tailscale.override {
-      buildGoModule = args:
-        pkgs.buildGoModule (args // {
-          subPackages = args.subPackages ++ [ "cmd/nginx-auth" ];
-          postInstall = args.postInstall + ''
-            sed -i -e "s#/usr/sbin/tailscale.#$out/bin/#" ./cmd/nginx-auth/tailscale.nginx-auth.service
-            install -D -m0444 -t $out/lib/systemd/system ./cmd/nginx-auth/tailscale.nginx-auth.service
-            sed -i -e "s#/var/run#/run#" ./cmd/nginx-auth/tailscale.nginx-auth.socket
-            sed -i -e "/^Wants/d" ./cmd/nginx-auth/tailscale.nginx-auth.service
-            sed -i -e "/^After/d" ./cmd/nginx-auth/tailscale.nginx-auth.service
-            install -D -m0444 -t $out/lib/systemd/system ./cmd/nginx-auth/tailscale.nginx-auth.socket
-          '';
-        });
-    };
+    # unstable version of tailscale used to match tailscale-nginx-auth
+    package = pkgs-unstable.tailscale;
   };
-  systemd.sockets."tailscale.nginx-auth".wantedBy = [ "multi-user.target" ];
-  systemd.services."tailscale.nginx-auth".after = [ ];
-  systemd.services."tailscale.nginx-auth".wants = [ ];
+
+
+  # configure tailscale-nginx-auth, which is currently only in nixos-unstable
+  systemd.packages = [
+    pkgs-unstable.tailscale-nginx-auth
+  ];
 
   networking.firewall = {
     checkReversePath = "loose";
