@@ -8,6 +8,7 @@
     ../services/tailscale.nix
     ../services/wireless-connectivity.nix
 
+    ../applications/beets.nix
     ../applications/cli-apps.nix
     ../applications/direnv.nix
     ../applications/emacs/emacs.nix
