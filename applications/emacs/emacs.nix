@@ -12,9 +12,10 @@
           mathalpha soul amsmath adjustbox collectbox mathtools cancel
 
           # These packages are needed for Org Mode PDF exports
-          wrapfig capt-of
+          wrapfig capt-of stix2-type1
 
-          stix2-type1;
+          # These let us do nice things
+          pgf tikz-cd;
       })
     ];
 
