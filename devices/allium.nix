@@ -70,11 +70,11 @@
       CPU_MAX_PERF_ON_BAT = 50;
 
       # turbo boost
-      CPU_BOOST_ON_AC=1;
-      CPU_BOOST_ON_BAT=0;
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 0;
 
-      CPU_HWP_DYN_BOOST_ON_AC=1;
-      CPU_HWP_DYN_BOOST_ON_BAT=0;
+      CPU_HWP_DYN_BOOST_ON_AC = 1;
+      CPU_HWP_DYN_BOOST_ON_BAT = 0;
     };
   };
 

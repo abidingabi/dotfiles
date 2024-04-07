@@ -7,11 +7,8 @@
     package = pkgs-unstable.tailscale;
   };
 
-
   # configure tailscale-nginx-auth, which is currently only in nixos-unstable
-  systemd.packages = [
-    pkgs-unstable.tailscale-nginx-auth
-  ];
+  systemd.packages = [ pkgs-unstable.tailscale-nginx-auth ];
 
   networking.firewall = {
     checkReversePath = "loose";

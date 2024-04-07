@@ -1,4 +1,4 @@
-{  ... }:
+{ ... }:
 
 {
   services.miniflux = {
@@ -11,7 +11,7 @@
       CREATE_ADMIN = "1";
       LISTEN_ADDR = "127.0.0.1:4001";
 
-      AUTH_PROXY_HEADER="X-Webauth-User";
+      AUTH_PROXY_HEADER = "X-Webauth-User";
     };
   };
 

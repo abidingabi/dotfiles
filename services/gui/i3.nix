@@ -14,13 +14,6 @@
     vSync = true;
   };
 
-  hmModules = [{
-    home.packages = with pkgs; [
-      copyq
-      feh
-      flameshot
-      i3lock
-      xss-lock
-    ];
-  }];
+  hmModules =
+    [{ home.packages = with pkgs; [ copyq feh flameshot i3lock xss-lock ]; }];
 }

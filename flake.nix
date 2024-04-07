@@ -27,9 +27,7 @@
           specialArgs = {
             inherit inputs;
 
-            pkgs-unstable = import inputs.nixpkgs-unstable {
-              system = system;
-            };
+            pkgs-unstable = import inputs.nixpkgs-unstable { system = system; };
           };
         };
     in {
