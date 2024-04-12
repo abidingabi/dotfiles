@@ -11,7 +11,7 @@
       CREATE_ADMIN = "1";
       LISTEN_ADDR = "127.0.0.1:4001";
 
-      AUTH_PROXY_HEADER = "Tailscale-User";
+      AUTH_PROXY_HEADER = "X-Webauth-User";
     };
   };
 
@@ -23,6 +23,9 @@
         header_up Remote-Addr {remote_host}
         header_up Remote-Port {remote_port}
         header_up Original-URI {uri}
+        copy_headers {
+          Tailscale-User>X-Webauth-User
+        }
       }
 
       encode zstd gzip
