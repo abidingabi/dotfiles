@@ -5,20 +5,20 @@
     laptopFeatures.enable = lib.mkEnableOption "laptop features";
   };
 
-  imports = [ ./fonts.nix ./i3.nix ./input-devices.nix ];
+  imports = [ ./fonts.nix ./gnome.nix ./input-devices.nix ];
 
   config = {
     services.xserver.enable = true;
-    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
 
-    # sound configuration
-    sound.enable = false;
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
+    # # sound configuration
+    # sound.enable = false;
+    # security.rtkit.enable = true;
+    # services.pipewire = {
+    #   enable = true;
+    #   alsa.enable = true;
+    #   alsa.support32Bit = true;
+    #   pulse.enable = true;
+    # };
   };
 }

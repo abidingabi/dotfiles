@@ -56,26 +56,26 @@
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   services.thermald.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "balance_performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "power";
+  # services.tlp = {
+  #   enable = true;
+  #   settings = {
+  #     CPU_SCALING_GOVERNOR_ON_AC = "balance_performance";
+  #     CPU_SCALING_GOVERNOR_ON_BAT = "power";
 
-      # p-states
-      CPU_MIN_PERF_ON_AC = 0;
-      CPU_MAX_PERF_ON_AC = 100;
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 50;
+  #     # p-states
+  #     CPU_MIN_PERF_ON_AC = 0;
+  #     CPU_MAX_PERF_ON_AC = 100;
+  #     CPU_MIN_PERF_ON_BAT = 0;
+  #     CPU_MAX_PERF_ON_BAT = 50;
 
-      # turbo boost
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
+  #     # turbo boost
+  #     CPU_BOOST_ON_AC = 1;
+  #     CPU_BOOST_ON_BAT = 0;
 
-      CPU_HWP_DYN_BOOST_ON_AC = 1;
-      CPU_HWP_DYN_BOOST_ON_BAT = 0;
-    };
-  };
+  #     CPU_HWP_DYN_BOOST_ON_AC = 1;
+  #     CPU_HWP_DYN_BOOST_ON_BAT = 0;
+  #   };
+  # };
 
   services.earlyoom.enable = true;
 }
