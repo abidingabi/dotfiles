@@ -51,6 +51,7 @@
 (package! jq-mode)
 (package! gnu-apl-mode)
 (package! zig-mode)
+(package! scad-mode)
 
 (package! screenshot
   :recipe (:host github :repo "tecosaur/screenshot"))
@@ -74,3 +75,4 @@
 (unpin! evil-collection)
 (package! evil-collection
   :recipe (:repo "emacs-evil/evil-collection" :branch "master"))
+
