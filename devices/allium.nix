@@ -76,6 +76,4 @@
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
     };
   };
-
-  services.earlyoom.enable = true;
 }
