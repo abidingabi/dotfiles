@@ -25,7 +25,7 @@
   # hardware config
   hardware.enableRedistributableFirmware = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_6_5;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
