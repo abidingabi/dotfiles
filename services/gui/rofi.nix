@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  hmModules = [{
+  home-manager.users.abi = {
     programs.rofi = {
       enable = true;
       terminal = "${pkgs.kitty}/bin/kitty";
@@ -9,5 +9,5 @@
       theme = "sidebar";
       extraConfig = { width = 400; };
     };
-  }];
+  };
 }

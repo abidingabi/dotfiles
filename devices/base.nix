@@ -8,17 +8,8 @@ in {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.${username} = { imports = config.hmModules; };
     }
   ];
-
-  # This is a hack that provides access to home manager in other nixos modules
-  options.hmModules = with lib;
-    mkOption {
-      type = types.listOf types.deferredModule;
-      default = [ ];
-      description = "Home manager modules for the default user";
-    };
 
   config = {
     nix = {

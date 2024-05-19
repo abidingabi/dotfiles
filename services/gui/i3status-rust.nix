@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  hmModules = [{
+  home-manager.users.abi = {
     programs.i3status-rust = {
       enable = true;
       bars.default = {
@@ -40,5 +40,5 @@
           ];
       };
     };
-  }];
+  };
 }

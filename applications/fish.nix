@@ -2,7 +2,7 @@
   # enables nixpkgs fish completions, as well as integration with e.g. fzf
   programs.fish.enable = true;
 
-  hmModules = [{
+  home-manager.users.abi = {
     programs.fish = {
       enable = true;
 
@@ -48,5 +48,5 @@
         '';
       };
     };
-  }];
+  };
 }

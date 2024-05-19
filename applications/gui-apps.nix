@@ -3,7 +3,7 @@
 {
   programs.dconf.enable = true;
 
-  hmModules = [{
+  home-manager.users.abi = {
     home.packages = with pkgs; [
       # GUI applications
       androidStudioPackages.beta
@@ -27,5 +27,5 @@
       # Games
       prismlauncher
     ];
-  }];
+  };
 }

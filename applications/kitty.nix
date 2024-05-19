@@ -1,5 +1,5 @@
 {
-  hmModules = [{
+  home-manager.users.abi = {
     programs.kitty = {
       enable = true;
 
@@ -11,5 +11,5 @@
         confirm_os_window_close 0
       '';
     };
-  }];
+  };
 }

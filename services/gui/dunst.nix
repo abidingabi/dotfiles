@@ -1,7 +1,5 @@
-{ ... }:
-
 {
-  hmModules = [{
+  home-manager.users.abi = {
     services.dunst.enable = true;
     services.dunst.settings = {
       global = {
@@ -9,5 +7,5 @@
         geometry = "700-30+20";
       };
     };
-  }];
+  };
 }

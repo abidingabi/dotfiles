@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  hmModules = [{
+  home-manager.users.abi = {
     home.packages = with pkgs; [
       ispell
       # LaTeX
@@ -33,5 +33,5 @@
         recursive = true;
       };
     };
-  }];
+  };
 }

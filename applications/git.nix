@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
-{
-  hmModules = [{
+{home-manager.users.abi =
+  {
     programs.git = {
       enable = true;
       lfs.enable = true;
@@ -37,5 +37,5 @@
         commit.gpgsign = true;
       };
     };
-  }];
+  };
 }

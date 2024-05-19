@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  hmModules = [{
+  home-manager.users.abi = {
     home.packages = with pkgs; [
       fira-mono
       overpass
@@ -16,5 +16,5 @@
     ];
 
     fonts.fontconfig.enable = true;
-  }];
+  };
 }

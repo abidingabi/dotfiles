@@ -21,7 +21,7 @@
             {
               networking.hostName = hostName;
               system.stateVersion = stateVersion;
-              hmModules = [{ home.stateVersion = stateVersion; }];
+              home-manager.users.abi = { home.stateVersion = stateVersion; };
             }
           ];
           specialArgs = {
