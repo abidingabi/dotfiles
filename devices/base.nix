@@ -25,6 +25,8 @@ in {
 
     nixpkgs.config.allowUnfree = true;
 
+    programs.nix-ld.enable = true;
+
     # Basic useful packages
     environment.systemPackages = with pkgs; [ git vim wget ];
 
