@@ -8,7 +8,6 @@
 
     config = {
       BASE_URL = "http://rss.priv.dogbuilt.net/";
-      CREATE_ADMIN = "1";
       LISTEN_ADDR = "127.0.0.1:4001";
 
       AUTH_PROXY_HEADER = "X-Webauth-User";
