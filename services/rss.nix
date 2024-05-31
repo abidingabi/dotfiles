@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   services.miniflux = {
@@ -14,10 +14,16 @@
     };
   };
 
+  services.tailscaleAuth = {
+    enable = true;
+    user = config.services.caddy.user;
+    group = config.services.caddy.group;
+  };
+
   # see https://caddyserver.com/docs/caddyfile/directives/forward_auth#tailscale
   services.caddy.extraConfig = ''
     http://rss.priv.dogbuilt.net {
-      forward_auth unix//run/tailscale.nginx-auth.sock {
+      forward_auth unix//run/tailscale-nginx-auth/tailscale-nginx-auth.sock {
         uri /auth
         header_up Remote-Addr {remote_host}
         header_up Remote-Port {remote_port}
