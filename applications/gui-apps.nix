@@ -6,7 +6,6 @@
   home-manager.users.abi = {
     home.packages = with pkgs; [
       # GUI applications
-      androidStudioPackages.beta
       audacity
       discord
       firefox
