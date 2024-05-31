@@ -68,11 +68,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1691464725,
-        "narHash": "sha256-WSC8TYo1UyeAFnUQDo85ieKGBgKVTjOCVM9Unx0V7Vw=",
+        "lastModified": 1717190029,
+        "narHash": "sha256-nFCrDvRa8nL/pFqqCQg8cH15MfxUv5MBMCoYCnvr7ik=",
         "owner": "abidingabi",
         "repo": "signal-flags",
-        "rev": "bdadb6406a0a7b5aa3a680780bf4260c67b4696e",
+        "rev": "a1e20d5f7e63dfc20327782bf01ddd472de4843b",
         "type": "github"
       },
       "original": {
