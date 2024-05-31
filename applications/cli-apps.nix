@@ -34,7 +34,7 @@
       # programming stuff
       gcc
       gnumake
-      nixfmt
+      nixfmt-classic
 
       fq
       jq
