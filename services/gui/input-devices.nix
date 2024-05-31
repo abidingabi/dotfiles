@@ -1,13 +1,13 @@
 { pkgs, ... }:
 
 {
-  services.xserver.libinput.enable = true;
-  services.xserver.libinput.mouse.accelProfile = "flat";
+  services.libinput.enable = true;
+  services.libinput.mouse.accelProfile = "flat";
 
   # keyboard options
-  services.xserver.layout = "us,us";
-  services.xserver.xkbVariant = "colemak,";
-  services.xserver.xkbOptions = "grp:ctrls_toggle";
+  services.xserver.xkb.layout = "us,us";
+  services.xserver.xkb.variant = "colemak,";
+  services.xserver.xkb.options = "grp:ctrls_toggle";
 
   # map CapsLock to Esc on single press and Ctrl on when used with multiple keys.
   services.interception-tools = {
