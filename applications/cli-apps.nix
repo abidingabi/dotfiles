@@ -14,6 +14,7 @@
       gitAndTools.gh
       htop
       imagemagick
+      librsvg
       p7zip
       pandoc
       parallel
