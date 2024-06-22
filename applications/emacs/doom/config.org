@@ -1,5 +1,5 @@
 * Why a literate config?
-Mostly because this makes it easier to organize stuff… If you want a true literate config, check out [[https:tecosaur.github.io/emacs-config/config.html][tecosaur's masterpiece]]. That's why most of the commentary is snark, and not actual explanations.
+Mostly because this makes it easier to organize stuff… That's why most of the commentary is snark, and not actual explanations.
 * Basic Configuration
 ** Who am I?
 #+begin_src elisp
@@ -201,6 +201,18 @@ In general, I don't like ligatures in programming languages, however they make r
 =org-fragtog= automatically toggles inline LaTeX fragments.
 #+begin_src elisp
 (add-hook 'org-mode-hook 'org-fragtog-mode)
+#+end_src
+*** PDF
+**** Keybinds
+#+begin_src elisp
+(after! pdf-view
+  (evil-define-key* 'normal pdf-view-mode-map
+    (kbd "<left>") #'pdf-view-scroll-down-or-previous-page
+    (kbd "<right>") #'pdf-view-scroll-up-or-next-page))
+#+end_src
+**** Theming
+#+begin_src elisp
+(add-hook 'pdf-view-mode-hook #'pdf-view-themed-minor-mode)
 #+end_src
 ** Minor
 *** Writeroom
