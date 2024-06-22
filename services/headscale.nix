@@ -12,11 +12,23 @@
 
       dns_config = {
         base_domain = "dogbuilt.net";
-        extra_records = [{
-          name = "rss.priv.dogbuilt.net";
-          type = "A";
-          value = "100.64.0.1";
-        }];
+        extra_records = [
+          {
+            name = "rss.priv.dogbuilt.net";
+            type = "A";
+            value = "100.64.0.1";
+          }
+          {
+            name = "search.priv.dogbuilt.net";
+            type = "A";
+            value = "100.64.0.1";
+          }
+          {
+            name = "yacy.priv.dogbuilt.net";
+            type = "A";
+            value = "100.64.0.1";
+          }
+        ];
       };
     };
   };

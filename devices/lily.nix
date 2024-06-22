@@ -10,6 +10,8 @@
     ../services/web-server.nix
 
     ../services/rss.nix
+    ../services/searx.nix
+    ../services/yacy.nix
 
     ../services/signal-flags.nix
   ];
