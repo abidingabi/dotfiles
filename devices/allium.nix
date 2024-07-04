@@ -75,4 +75,12 @@
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
     };
   };
+
+  # printing, with autodiscovery
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 }
