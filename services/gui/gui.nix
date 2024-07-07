@@ -20,5 +20,8 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+
+    # used by lollypop for last.fm scrobbling
+    services.gnome.gnome-keyring.enable = true;
   };
 }
