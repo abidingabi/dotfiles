@@ -58,3 +58,5 @@
 (unpin! evil-collection)
 (package! evil-collection
   :recipe (:repo "emacs-evil/evil-collection" :branch "master"))
+
+(package! cdlatex)
