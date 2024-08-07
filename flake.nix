@@ -8,6 +8,13 @@
 
     signal-flags.url = "github:abidingabi/signal-flags";
     signal-flags.inputs.nixpkgs.follows = "nixpkgs";
+
+    pronounspace = {
+      type = "github";
+      owner = "abidingabi";
+      repo = "pronounspace";
+      flake = false;
+    };
   };
 
   outputs = inputs:

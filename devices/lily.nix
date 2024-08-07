@@ -12,6 +12,7 @@
     ../services/rss.nix
 
     ../services/signal-flags.nix
+    ../services/pronoun-space.nix
   ];
 
   services.tailscale.useRoutingFeatures = "both";

@@ -53,11 +53,28 @@
         "type": "github"
       }
     },
+    "pronounspace": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723052991,
+        "narHash": "sha256-BVU/HUNl4LSnXfyOqcWb7b9OR1buTkWRuGzDqml2Ms8=",
+        "owner": "abidingabi",
+        "repo": "pronounspace",
+        "rev": "8acd8b7b65da7e45614a3f3979352ecc5e376488",
+        "type": "github"
+      },
+      "original": {
+        "owner": "abidingabi",
+        "repo": "pronounspace",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "pronounspace": "pronounspace",
         "signal-flags": "signal-flags"
       }
     },
