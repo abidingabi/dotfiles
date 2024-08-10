@@ -12,6 +12,7 @@
       fzf
       git-lfs
       gitAndTools.gh
+      graphviz
       htop
       imagemagick
       librsvg
