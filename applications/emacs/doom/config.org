@@ -42,7 +42,8 @@ Because some things should look nice.
 ** Theme
 Light themes are nice for plain text and code, and I especially like flatwhite's choice of using backgrounds for syntax highlighting.
 #+begin_src elisp
-(setq doom-theme 'doom-flatwhite)
+;; (setq doom-theme 'doom-flatwhite)
+(setq doom-theme 'doom-plain)
 #+end_src
 ** Custom Faces
 #+begin_src elisp
