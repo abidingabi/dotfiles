@@ -190,6 +190,11 @@ In general, I don't like ligatures in programming languages, however they make r
 (setq +ligatures-extras-in-modes '(org-mode))
 #+end_src
 
+While generally, I like =org-pretty-entities=, the way it changes sub/superscripts makes them incredibly annoying to edit.
+#+begin_src elisp
+(setq org-pretty-entities-include-sub-superscripts nil)
+#+end_src
+
 =▾= is used to replace =…= for collapsed items, as it indicates 'collapsed section' better.
 #+begin_src elisp
 (setq org-ellipsis "▾")
