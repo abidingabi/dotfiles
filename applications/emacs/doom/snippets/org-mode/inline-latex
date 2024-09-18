@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Inline LaTeX
+# uuid: inline-LaTeX
+# key: m
+# --
+\\( $1 \\)$0
