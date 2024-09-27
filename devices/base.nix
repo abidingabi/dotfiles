@@ -33,5 +33,10 @@ in {
       isNormalUser = true;
       extraGroups = [ "wheel" ]; # Enables sudo
     };
+
+    # add a symlink to bash at /bin/bash for compatibility
+    systemd.tmpfiles.settings."compatibility"."/bin/bash"."L" = {
+      argument = "${pkgs.bash}/bin/bash";
+    };
   };
 }
