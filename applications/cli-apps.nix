@@ -35,7 +35,10 @@
 
       # programming stuff
       gcc
+      gdb
       gnumake
+      valgrind
+
       nixfmt-classic
 
       fq
