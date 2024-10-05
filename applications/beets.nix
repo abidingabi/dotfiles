@@ -8,7 +8,15 @@
       settings = {
         directory = "~/music";
         import.move = true;
-        plugins = [ "fetchart" "lyrics" ];
+        plugins = [ "fetchart" "lyrics" "smartplaylist" ];
+        smartplaylist = {
+          relative_to = "~/music/.playlists";
+          playlist_dir = "~/music/.playlists";
+          playlists = [{
+            name = "general-listening.m3u";
+            query = "-album:soundtrack -generallistening:false";
+          }];
+        };
       };
     };
   };
