@@ -27,6 +27,8 @@
           echo -n (set_color cyan)(prompt_pwd) (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
         '';
 
+        e = "emacsclient --create-frame --no-wait $argv";
+
         upload_file = "curl http://0x0.st -F 'file=@'$argv";
 
         # FIRST-related APIs
