@@ -10,6 +10,7 @@
     ../services/web-server.nix
 
     ../services/rss.nix
+    ../services/syncthing.nix
 
     ../services/signal-flags.nix
     ../services/pronoun-space.nix
