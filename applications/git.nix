@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
-{home-manager.users.abi =
-  {
+{
+  home-manager.users.abi = {
     programs.git = {
       enable = true;
       lfs.enable = true;
