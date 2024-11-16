@@ -7,7 +7,13 @@
       terminal = "${pkgs.kitty}/bin/kitty";
       cycle = false;
       theme = "sidebar";
-      extraConfig = { width = 400; };
+      extraConfig = {
+        width = 400;
+
+        matching = "fuzzy";
+        sort = true;
+        sorting-method = "fzf";
+      };
     };
   };
 }
