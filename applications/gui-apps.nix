@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   programs.dconf.enable = true;
@@ -8,7 +8,7 @@
       # GUI applications
       audacity
       discord
-      firefox
+      pkgs-unstable.firefox
       gimp
       google-chrome
       jetbrains.idea-community
