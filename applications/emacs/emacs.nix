@@ -11,10 +11,13 @@
           # These packages are needed for CalcTeX
           mathalpha soul amsmath adjustbox collectbox mathtools cancel
 
+          # This package is needed for fast previews
+          mylatexformat
+
           # These packages are needed for Org Mode PDF exports
           wrapfig capt-of stix2-type1
 
-          # These let us do nice things
+          # These let us do nice graphics
           pgf tikz-cd;
       })
     ];

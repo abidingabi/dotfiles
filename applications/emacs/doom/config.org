@@ -203,10 +203,10 @@ While generally, I like =org-pretty-entities=, the way it changes sub/superscrip
 #+begin_src elisp
 (setq! org-re-reveal-single-file 't)
 #+end_src
-***** Org Fragtog
-=org-fragtog= automatically toggles inline LaTeX fragments.
+***** Org LaTeX Auto Mode
+Automatically toggle inline LaTeX fragments.
 #+begin_src elisp
-(add-hook 'org-mode-hook 'org-fragtog-mode)
+(add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
 #+end_src
 ***** Org CDLaTeX
 =org-cdlatex= helps with typing in LaTeX snippets.
