@@ -17,6 +17,12 @@
             query = "-album:soundtrack -generallistening:false";
           }];
         };
+
+        paths = {
+          default = "$albumartist/$album%aunique{}/$track $title";
+          singleton = "$artist/singles/$title";
+          comp = "Compilations/$album%aunique{}/$track $title";
+        };
       };
     };
   };
