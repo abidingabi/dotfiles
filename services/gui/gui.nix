@@ -12,7 +12,6 @@
     services.xserver.displayManager.lightdm.enable = true;
 
     # sound configuration
-    sound.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
       enable = true;

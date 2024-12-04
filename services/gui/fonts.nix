@@ -7,7 +7,7 @@
       overpass
 
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-extra
       noto-fonts-emoji
       noto-fonts-emoji-blob-bin
