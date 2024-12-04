@@ -56,7 +56,7 @@
   };
 
   swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
-
+  zramSwap.enable = true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   services.thermald.enable = true;
   services.tlp = {
