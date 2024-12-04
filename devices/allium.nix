@@ -55,6 +55,8 @@
     fsType = "ext4";
   };
 
+  swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
+
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   services.thermald.enable = true;
   services.tlp = {
