@@ -10,6 +10,7 @@
       ffmpeg
       file
       fzf
+      ghostscript
       git-lfs
       gitAndTools.gh
       graphviz
