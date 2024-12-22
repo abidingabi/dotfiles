@@ -7,7 +7,7 @@
   # keyboard options
   services.xserver.xkb.layout = "us,us";
   services.xserver.xkb.variant = "colemak,";
-  services.xserver.xkb.options = "grp:ctrls_toggle";
+  services.xserver.xkb.options = "grp:shift_caps_toggle";
 
   # map CapsLock to Esc on single press and Ctrl on when used with multiple keys.
   services.interception-tools = {
