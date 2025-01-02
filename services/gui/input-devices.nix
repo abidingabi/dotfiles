@@ -5,9 +5,12 @@
   services.libinput.mouse.accelProfile = "flat";
 
   # keyboard options
-  services.xserver.xkb.layout = "us,us";
-  services.xserver.xkb.variant = "colemak,";
-  services.xserver.xkb.options = "grp:shift_caps_toggle";
+  services.xserver.xkb = {
+    layout = "us,us";
+    variant = "colemak,";
+    options = "grp:shift_caps_toggle";
+  };
+  console.useXkbConfig = true;
 
   # map CapsLock to Esc on single press and Ctrl on when used with multiple keys.
   services.interception-tools = {
