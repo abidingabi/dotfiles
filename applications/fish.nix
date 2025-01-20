@@ -49,6 +49,11 @@
           curl -H "X-TOA-Key:$TOA_KEY" -H "Content-Type:application/json" -H "X-Application-Origin:abidingabi-interactive-api-usage" "https://theorangealliance.org/api/$argv"
         '';
       };
+
+      shellAbbrs = {
+        constrain =
+          "systemd-run --user --scope -p MemoryMax=4G -p CPUQuota=100% --";
+      };
     };
   };
 }
