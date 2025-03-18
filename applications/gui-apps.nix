@@ -14,6 +14,8 @@
       jetbrains.idea-community
       kitty
       prusa-slicer
+      reaper
+      vital
       xfce.thunar
 
       # GUI utilities
