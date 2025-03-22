@@ -48,6 +48,15 @@
           set TOA_KEY (cat ~/theorangealliance.key)
           curl -H "X-TOA-Key:$TOA_KEY" -H "Content-Type:application/json" -H "X-Application-Origin:abidingabi-interactive-api-usage" "https://theorangealliance.org/api/$argv"
         '';
+
+        "," = ''
+          set packages (command-not-found (string split -f1 ' ' $argv[1]) &| grep nix-shell | rev | cut -d' ' -f1 | rev)
+          if [ (count $packages) = 0 ]
+            echo "no matching packages :<"
+            return 2
+          end
+          nix shell nixpkgs#$packages[1] --command $argv
+        '';
       };
 
       shellAbbrs = {
