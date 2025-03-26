@@ -13,4 +13,4 @@ WINDOW=$(xdotool getactivewindow)
 SYMBOL=$(rofi -dmenu -i -input "/etc/nixos/services/gui/symbols.txt" | awk '{printf $1}')
 # this is a hack; see https://github.com/jordansissel/xdotool/issues/150
 xdotool key --clearmodifiers shift
-xdotool windowfocus $WINDOW && xdotool type --window $WINDOW $SYMBOL
+xdotool windowfocus "$WINDOW" && xdotool type --window "$WINDOW" "$SYMBOL"
