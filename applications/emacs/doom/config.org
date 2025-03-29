@@ -246,6 +246,11 @@ Git auto commit is great, but it's even nicer to automatically push to remotes, 
 (setq gac-automatically-push-p t
       gac-ask-for-summary-p t)
 #+end_src
+* Formatters
+** Haskell
+#+begin_src elisp
+(set-formatter! 'ormolu '("ormolu" "--stdin-input-file" "-") :modes '(haskell-mode))
+#+end_src
 * Keybinds
 #+begin_src elisp
 (map! :leader
