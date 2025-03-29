@@ -6,7 +6,7 @@
       enable = true;
       lfs.enable = true;
 
-      userName = "Abigail";
+      userName = "abigail";
       userEmail = "abigail@dogbuilt.net";
 
       ignores = [ "*~" "*.swp" ];
