@@ -14,3 +14,5 @@ SYMBOL=$(rofi -dmenu -i -input "/etc/nixos/services/gui/symbols.txt" | awk '{pri
 # this is a hack; see https://github.com/jordansissel/xdotool/issues/150
 xdotool key --clearmodifiers shift
 xdotool windowfocus "$WINDOW" && xdotool type --window "$WINDOW" "$SYMBOL"
+
+# cat /etc/nixos/services/gui/symbols.txt | awk -F'\t' 'length($2) <= 24 {printf "%-24s %s\n", $2, $1}' | fuzzel --dmenu
