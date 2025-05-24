@@ -12,6 +12,7 @@
       audacity
       discord
       pkgs-unstable.firefox
+
       gimp
       jetbrains.idea-community
       kitty

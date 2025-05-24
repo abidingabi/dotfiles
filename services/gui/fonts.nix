@@ -4,6 +4,7 @@
   home-manager.users.abi = {
     home.packages = with pkgs; [
       fira-mono
+      departure-mono
       overpass
 
       noto-fonts

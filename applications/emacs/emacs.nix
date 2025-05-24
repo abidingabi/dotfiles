@@ -27,11 +27,15 @@
 
     programs.emacs = {
       enable = true;
+      package = pkgs.emacs-pgtk;
       extraPackages = (epkgs: [ epkgs.vterm epkgs.mu4e ]);
     };
 
-    services.emacs.enable = true;
-    services.emacs.client.enable = true;
+    services.emacs = {
+      enable = true;
+      client.enable = true;
+      package = pkgs.emacs-pgtk;
+    };
 
     xdg.configFile = {
       "doom" = {
