@@ -9,6 +9,7 @@
       audacity
       discord
       pkgs-unstable.firefox
+
       gimp
       google-chrome
       jetbrains.idea-community
