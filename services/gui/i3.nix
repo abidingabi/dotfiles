@@ -14,7 +14,9 @@
     vSync = true;
   };
 
+  programs.i3lock.enable = true;
+
   home-manager.users.abi = {
-    home.packages = with pkgs; [ copyq feh flameshot i3lock xss-lock ];
+    home.packages = with pkgs; [ copyq feh flameshot xss-lock ];
   };
 }
