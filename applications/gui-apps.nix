@@ -3,6 +3,9 @@
 {
   programs.dconf.enable = true;
 
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
   home-manager.users.abi = {
     home.packages = with pkgs; [
       # GUI applications
@@ -19,7 +22,6 @@
       xfce.thunar
 
       # GUI utilities
-      appimage-run
       arandr
       lollypop
       mpv
