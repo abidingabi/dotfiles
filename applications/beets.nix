@@ -15,6 +15,8 @@
           singleton = "$artist/singles/$title";
           comp = "Compilations/$album%aunique{}/$track $title";
         };
+
+        lyrics.synced = true;
       };
     };
   };
