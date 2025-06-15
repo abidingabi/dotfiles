@@ -13,11 +13,11 @@
       discord
       pkgs-unstable.firefox
       gimp
-      google-chrome
       jetbrains.idea-community
       kitty
       prusa-slicer
       reaper
+      ungoogled-chromium
       vital
       xfce.thunar
 
