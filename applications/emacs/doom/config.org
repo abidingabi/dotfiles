@@ -169,14 +169,14 @@ Both mixed pitch and =+org-pretty-mode= are great.
 Headings should be made bigger:
 #+begin_src elisp
 (custom-set-faces!
-  '(outline-1 :weight extra-bold :height 1.25)
-  '(outline-2 :weight bold :height 1.15)
-  '(outline-3 :weight bold :height 1.12)
-  '(outline-4 :weight semi-bold :height 1.09)
-  '(outline-5 :weight semi-bold :height 1.06)
-  '(outline-6 :weight semi-bold :height 1.03)
-  '(outline-8 :weight semi-bold)
-  '(outline-9 :weight semi-bold))
+  '(org-level-1 :weight extra-bold :height 1.25)
+  '(org-level-2 :weight bold :height 1.15)
+  '(org-level-3 :weight bold :height 1.12)
+  '(org-level-4 :weight semi-bold :height 1.09)
+  '(org-level-5 :weight semi-bold :height 1.06)
+  '(org-level-6 :weight semi-bold :height 1.03)
+  '(org-level-7 :weight semi-bold)
+  '(org-level-8 :weight semi-bold))
 #+end_src
 and also titles:
 #+begin_src elisp
