@@ -57,6 +57,10 @@
           end
           nix shell nixpkgs#$packages[1] --command $argv
         '';
+
+        bell = ''
+          printf '\a'
+        '';
       };
 
       shellAbbrs = {
