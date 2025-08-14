@@ -27,11 +27,11 @@
     let
       mkSystem = system: stateVersion: hostName:
         inputs.nixpkgs.lib.nixosSystem {
-          inherit system;
           modules = [
             ./devices/base.nix
             ./devices/${hostName}.nix
             {
+              nixpkgs.hostPlatform = system;
               networking.hostName = hostName;
               system.stateVersion = stateVersion;
               home-manager.users.abi = { home.stateVersion = stateVersion; };
@@ -40,7 +40,7 @@
           specialArgs = {
             inherit inputs;
 
-            pkgs-unstable = import inputs.nixpkgs-unstable { system = system; };
+            pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
           };
         };
     in {
