@@ -75,8 +75,7 @@
   services.tlp = {
     enable = true;
     settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "balance_performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "power";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
       # p-states
       CPU_MIN_PERF_ON_AC = 0;
