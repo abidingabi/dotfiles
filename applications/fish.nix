@@ -29,6 +29,12 @@
 
         e = "emacsclient --create-frame --no-wait $argv";
 
+        emux = ''
+          set cmd $argv
+          test -n "$cmd" || set cmd fish
+          emacsclient -e "(let ((vterm-shell \"$cmd\")) (vterm \"$cmd\"))"
+        '';
+
         upload_file = "curl http://0x0.st -F 'file=@'$argv";
 
         # FIRST-related APIs
