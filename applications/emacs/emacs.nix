@@ -18,7 +18,10 @@
           wrapfig capt-of stix2-type1
 
           # These let us do nice graphics
-          pgf tikz-cd;
+          pgf tikz-cd
+
+          # nice utility packages;
+          algorithmicx;
       })
     ];
 
