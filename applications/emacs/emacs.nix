@@ -27,7 +27,6 @@
 
     programs.emacs = {
       enable = true;
-      package = pkgs.emacs-pgtk;
       extraPackages = (epkgs: [ epkgs.vterm epkgs.mu4e ]);
     };
 
