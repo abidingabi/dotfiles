@@ -12,6 +12,7 @@
     ../services/rss.nix
     ../services/syncthing.nix
 
+    ../services/covey-town.nix
     ../services/signal-flags.nix
     ../services/pronoun-space.nix
   ];
