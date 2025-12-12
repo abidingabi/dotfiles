@@ -4,7 +4,6 @@ let username = "abi";
 in {
   # Set up home manager
   imports = [
-    inputs.lix-module.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
@@ -14,6 +13,7 @@ in {
 
   config = {
     nix = {
+      package = pkgs.lixPackageSets.stable.lix;
       settings = {
         auto-optimise-store = true;
         experimental-features = [ "nix-command" "flakes" ];
