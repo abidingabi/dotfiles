@@ -40,6 +40,7 @@
     LIBVA_DRIVER_NAME = "iHD";
   }; # Force intel-media-driver
 
+  boot.kernelPackages = pkgs.linuxPackages_6_16;
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
