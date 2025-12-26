@@ -6,14 +6,7 @@
   services.restic.backups.abidingabi = {
     initialize = true;
 
-    timerConfig = {
-      OnCalendar = "23:00";
-      WakeSystem = true;
-    };
-
-    paths = [ "/home/abi" ];
-    extraBackupArgs =
-      [ "--exclude=/home/abi/.cache/*" "--exclude=/home/abi/Android/*" ];
+    timerConfig = { WakeSystem = true; };
 
     pruneOpts = [ "--keep-daily 7" "--keep-weekly 4" "--keep-yearly 10" ];
 

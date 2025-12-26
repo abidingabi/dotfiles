@@ -5,6 +5,7 @@
     (modulesPath + "/profiles/qemu-guest.nix")
 
     ../services/headscale.nix
+    ../services/restic.nix
     ../services/ssh.nix
     ../services/tailscale.nix
     ../services/web-server.nix
@@ -46,5 +47,11 @@
       address = "fe80::1";
       interface = "enp1s0";
     };
+  };
+
+  # backup
+  services.restic.backups.abidingabi = {
+    timerConfig.OnCalendar = "0:00";
+    paths = [ "/etc" "/home" "/root" "/var" ];
   };
 }

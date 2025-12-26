@@ -99,4 +99,12 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  # backup paths
+  services.restic.backups.abidingabi = {
+    paths = [ "/home/abi" ];
+    extraBackupArgs =
+      [ "--exclude=/home/abi/.cache/*" "--exclude=/home/abi/Android/*" ];
+    timerConfig.OnCalendar = "0:00";
+  };
 }
