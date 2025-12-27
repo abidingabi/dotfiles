@@ -10,6 +10,7 @@
     ../services/tailscale.nix
     ../services/web-server.nix
 
+    ../services/minecraft-server.nix
     ../services/rss.nix
     ../services/syncthing.nix
 
