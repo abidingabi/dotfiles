@@ -12,6 +12,7 @@
 
       dns = {
         base_domain = "priv.dogbuilt.net";
+        override_local_dns = false;
         extra_records = [{
           name = "rss.priv.dogbuilt.net";
           type = "A";

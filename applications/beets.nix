@@ -22,7 +22,7 @@
             requests
             cached-property
             pycountry
-            dateutil
+            python-dateutil
             ordered-set
           ];
           checkInputs = with pkgs.python3Packages;
@@ -45,7 +45,7 @@
           };
         });
 
-      in pkgs.beets-unstable.override {
+      in pkgs.python3.pkgs.beets.override {
         pluginOverrides = {
           beetcamp = {
             enable = true;

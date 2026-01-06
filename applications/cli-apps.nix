@@ -12,7 +12,7 @@
       fzf
       ghostscript
       git-lfs
-      gitAndTools.gh
+      gh
       graphviz
       htop
       imagemagick

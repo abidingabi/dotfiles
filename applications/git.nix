@@ -6,14 +6,14 @@
       enable = true;
       lfs.enable = true;
 
-      userName = "Abigail Goz";
-      userEmail = "abigail@dogbuilt.net";
+      settings = {
+        user = {
+          name = "Abigail Goz";
+          email = "abigail@dogbuilt.net";
+        };
 
-      ignores = [ "*~" "*.swp" ];
+        aliases = { pushf = "push --force-with-lease"; };
 
-      aliases = { pushf = "push --force-with-lease"; };
-
-      extraConfig = {
         merge.ff = "only";
         branch.autosetuprebase = "always";
         pull.rebase = true;

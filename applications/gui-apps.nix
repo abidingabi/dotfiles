@@ -13,7 +13,7 @@
       discord
       pkgs-unstable.firefox
       gimp
-      jetbrains.idea-community
+      jetbrains.idea-oss
       kitty
       prusa-slicer
       reaper
