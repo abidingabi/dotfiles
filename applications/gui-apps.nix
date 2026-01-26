@@ -17,13 +17,13 @@
       kitty
       prusa-slicer
       reaper
+      recordbox
       ungoogled-chromium
       vital
       xfce.thunar
 
       # GUI utilities
       arandr
-      lollypop
       mpv
       pavucontrol
       peek

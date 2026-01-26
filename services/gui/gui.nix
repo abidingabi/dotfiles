@@ -20,8 +20,5 @@
       pulse.enable = true;
       jack.enable = true;
     };
-
-    # used by lollypop for last.fm scrobbling
-    services.gnome.gnome-keyring.enable = true;
   };
 }
