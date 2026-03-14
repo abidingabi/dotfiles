@@ -17,6 +17,6 @@
   programs.i3lock.enable = true;
 
   home-manager.users.abi = {
-    home.packages = with pkgs; [ copyq feh flameshot xss-lock ];
+    home.packages = with pkgs; [ brightnessctl copyq feh flameshot xss-lock ];
   };
 }
