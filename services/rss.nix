@@ -11,6 +11,7 @@
       LISTEN_ADDR = "127.0.0.1:4001";
 
       AUTH_PROXY_HEADER = "X-Webauth-User";
+      TRUSTED_REVERSE_PROXY_NETWORKS = "100.64.0.0/8";
     };
   };
 
