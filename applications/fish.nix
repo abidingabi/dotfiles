@@ -69,6 +69,10 @@
         bell = ''
           printf '\a'
         '';
+
+        "iris" = ''
+          scp $argv root@iris:/mnt/us/documents/scratch
+        '';
       };
 
       shellAbbrs = {
