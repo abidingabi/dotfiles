@@ -19,6 +19,9 @@
         "settings/file-chooser/clock-format" = "12h";
         "desktop/interface/clock-show-weekday" = true;
 
+        # Pinned items in dock
+        "shell/favorite-apps" = [ ];
+
         # Custom keybinds. Figure out how to make this nicer if you plan on
         # adding more (but probably just don’t add more).
         "settings-daemon/plugins/media-keys/custom-keybindings" = [
