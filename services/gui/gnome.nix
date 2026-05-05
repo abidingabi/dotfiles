@@ -22,12 +22,17 @@
         # Pinned items in dock
         "shell/favorite-apps" = [ ];
 
-        # Custom keybinds. Figure out how to make this nicer if you plan on
+        # Overriding built-in shortcuts
+        # to not overlap with our clipboard manager
+        "shell/keybindings/toggle-message-tray" = [ "<Shift><Super>v" ];
+
+        # Custom shortcuts. Figure out how to make this nicer if you plan on
         # adding more (but probably just don’t add more).
         "settings-daemon/plugins/media-keys/custom-keybindings" = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/browser/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/editor/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/clipboard/"
         ];
 
         "settings-daemon/plugins/media-keys/custom-keybindings/terminal/name" =
@@ -50,6 +55,13 @@
           "emacsclient -c";
         "settings-daemon/plugins/media-keys/custom-keybindings/editor/binding" =
           "<Super>e";
+
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/name" =
+          "Clipboard";
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/command" =
+          "copyq show";
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/binding" =
+          "<Super>v";
 
         # Apps
         # System Manager

@@ -11,5 +11,13 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
+    # clipboard manager
+    home-manager.users.abi = {
+      services.copyq = {
+        enable = true;
+        forceXWayland = false;
+      };
+    };
   };
 }
