@@ -1,5 +1,5 @@
 {
-  imports = [ ./gnome.nix ./fonts.nix ./input-devices.nix ];
+  imports = [ ./gnome.nix ./fonts.nix ./input-devices.nix ./usb-automount.nix ];
 
   config = {
     # sound configuration
