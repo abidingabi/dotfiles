@@ -1,16 +1,7 @@
-{ config, lib, pkgs, ... }:
-
 {
-  options.dogbuilt.services.gui = {
-    laptopFeatures.enable = lib.mkEnableOption "laptop features";
-  };
-
-  imports = [ ./fonts.nix ./i3.nix ./input-devices.nix ];
+  imports = [ ./gnome.nix ./fonts.nix ./input-devices.nix ];
 
   config = {
-    services.xserver.enable = true;
-    services.xserver.displayManager.lightdm.enable = true;
-
     # sound configuration
     security.rtkit.enable = true;
     services.pipewire = {
