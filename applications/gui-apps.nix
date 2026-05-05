@@ -23,10 +23,8 @@
       xfce.thunar
 
       # GUI utilities
-      arandr
       mpv
       pavucontrol
-      peek
 
       # Games
       prismlauncher
