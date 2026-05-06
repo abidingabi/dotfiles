@@ -19,6 +19,9 @@
         "settings/file-chooser/clock-format" = "12h";
         "desktop/interface/clock-show-weekday" = true;
 
+        # more convenient on a trackpad
+        "desktop/wm/preferences/resize-with-right-button" = true;
+
         # Pinned items in dock
         "shell/favorite-apps" = [ ];
 
