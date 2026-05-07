@@ -23,6 +23,7 @@
       xfce.thunar
 
       # GUI utilities
+      gradia
       mpv
       pavucontrol
 

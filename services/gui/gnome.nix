@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ pkgs, lib, ... }: {
 
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
@@ -36,6 +36,7 @@
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/browser/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/editor/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/clipboard/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/"
         ];
 
         "settings-daemon/plugins/media-keys/custom-keybindings/terminal/name" =
@@ -65,6 +66,13 @@
           "copyq show";
         "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/binding" =
           "<Super>v";
+
+        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/name" =
+          "Screenshot";
+        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/command" =
+          "gradia --screenshot=INTERACTIVE";
+        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/binding" =
+          "<Shift><Super>s";
 
         # Apps
         # System Manager

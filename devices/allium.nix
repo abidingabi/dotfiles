@@ -86,4 +86,11 @@
       [ "--exclude=/home/abi/.cache/*" "--exclude=/home/abi/Android/*" ];
     timerConfig.OnCalendar = "0:00";
   };
+
+  # for CS 331
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+  services.gnome.gnome-keyring.enable = true;
 }
