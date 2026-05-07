@@ -8,7 +8,7 @@
     dconf.settings = {
       "org/gnome" = {
         # inputs
-        "input-sources/sources" = [
+        "desktop/input-sources/sources" = [
           (lib.gvariant.mkTuple [ "xkb" "us+colemak" ])
           (lib.gvariant.mkTuple [ "xkb" "us" ])
         ];
