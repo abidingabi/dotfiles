@@ -16,10 +16,10 @@
     ../applications/home/fish.nix
     ../applications/home/git.nix
 
-    ../applications/gui-apps.nix
     ../applications/home/kitty.nix
-    ../applications/steam.nix
-    ../applications/virtualbox.nix
+    ../applications/nixos/gui-apps.nix
+    ../applications/nixos/steam.nix
+    ../applications/nixos/virtualbox.nix
   ];
 
   # hardware config

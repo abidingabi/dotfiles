@@ -1,5 +1,5 @@
 {
-  imports = [ ./home/gui-apps.nix ];
+  imports = [ ../home/gui-apps.nix ];
 
   programs.dconf.enable = true;
 

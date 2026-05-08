@@ -1,5 +1,5 @@
 {
-  imports = [ ./home/fish.nix ];
+  imports = [ ../home/fish.nix ];
 
   # enables nixpkgs fish completions, as well as integration with e.g. fzf
   programs.fish.enable = true;
