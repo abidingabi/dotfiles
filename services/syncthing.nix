@@ -1,7 +1,1 @@
-{
-  services.syncthing = {
-    enable = true;
-    user = "abi";
-    dataDir = "/home/abi";
-  };
-}
+{ home-manager.users.abi = { services.syncthing = { enable = true; }; }; }
