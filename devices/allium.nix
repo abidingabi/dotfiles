@@ -3,11 +3,12 @@
 {
   imports = [
     ../services/home/email.nix
-    ../services/gui/gui.nix
-    ../services/restic.nix
     ../services/home/syncthing.nix
-    ../services/tailscale.nix
-    ../services/wireless-connectivity.nix
+
+    ../services/nixos/gui/gui.nix
+    ../services/nixos/restic.nix
+    ../services/nixos/tailscale.nix
+    ../services/nixos/wireless-connectivity.nix
 
     ../applications/home/beets.nix
     ../applications/home/cli-apps.nix

@@ -4,19 +4,20 @@
   imports = [
     (modulesPath + "/profiles/qemu-guest.nix")
 
-    ../services/headscale.nix
-    ../services/restic.nix
-    ../services/ssh.nix
-    ../services/tailscale.nix
-    ../services/web-server.nix
+    ../services/nixos/headscale.nix
+    ../services/nixos/restic.nix
+    ../services/nixos/ssh.nix
+    ../services/nixos/tailscale.nix
+    ../services/nixos/web-server.nix
 
-    ../services/minecraft-server.nix
-    ../services/rss.nix
+    ../services/nixos/minecraft-server.nix
+    ../services/nixos/rss.nix
+
     ../services/home/syncthing.nix
 
-    ../services/covey-town.nix
-    ../services/signal-flags.nix
-    ../services/pronoun-space.nix
+    ../services/nixos/covey-town.nix
+    ../services/nixos/signal-flags.nix
+    ../services/nixos/pronoun-space.nix
   ];
 
   services.tailscale.useRoutingFeatures = "both";

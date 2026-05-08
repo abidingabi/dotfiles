@@ -4,8 +4,8 @@
   imports = [
     (modulesPath + "/virtualisation/qemu-vm.nix")
 
-    ../services/gui/gui.nix
-    ../services/tailscale.nix
+    ../services/nixos/gui/gui.nix
+    ../services/nixos/tailscale.nix
 
     ../applications/home/emacs/emacs.nix
     ../applications/home/fish.nix
