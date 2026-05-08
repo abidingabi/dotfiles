@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ../services/email.nix
+    ../services/home/email.nix
     ../services/gui/gui.nix
     ../services/restic.nix
-    ../services/syncthing.nix
+    ../services/home/syncthing.nix
     ../services/tailscale.nix
     ../services/wireless-connectivity.nix
 

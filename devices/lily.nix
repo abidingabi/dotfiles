@@ -12,7 +12,7 @@
 
     ../services/minecraft-server.nix
     ../services/rss.nix
-    ../services/syncthing.nix
+    ../services/home/syncthing.nix
 
     ../services/covey-town.nix
     ../services/signal-flags.nix
