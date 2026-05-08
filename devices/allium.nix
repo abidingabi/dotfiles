@@ -9,15 +9,15 @@
     ../services/tailscale.nix
     ../services/wireless-connectivity.nix
 
-    ../applications/beets.nix
-    ../applications/cli-apps.nix
-    ../applications/direnv.nix
-    ../applications/emacs/emacs.nix
-    ../applications/fish.nix
-    ../applications/git.nix
+    ../applications/home/beets.nix
+    ../applications/home/cli-apps.nix
+    ../applications/home/direnv.nix
+    ../applications/home/emacs/emacs.nix
+    ../applications/home/fish.nix
+    ../applications/home/git.nix
 
     ../applications/gui-apps.nix
-    ../applications/kitty.nix
+    ../applications/home/kitty.nix
     ../applications/steam.nix
     ../applications/virtualbox.nix
   ];

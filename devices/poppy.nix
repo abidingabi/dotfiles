@@ -7,11 +7,11 @@
     ../services/gui/gui.nix
     ../services/tailscale.nix
 
-    ../applications/emacs/emacs.nix
-    ../applications/fish.nix
-    ../applications/git.nix
+    ../applications/home/emacs/emacs.nix
+    ../applications/home/fish.nix
+    ../applications/home/git.nix
 
-    ../applications/kitty.nix
+    ../applications/home/kitty.nix
   ];
 
   virtualisation.qemu.options = [ "-vga qxl" ];

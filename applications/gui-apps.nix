@@ -1,34 +1,8 @@
-{ pkgs, pkgs-unstable, ... }:
-
 {
+  imports = [ ./home/gui-apps.nix ];
+
   programs.dconf.enable = true;
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
-
-  home-manager.users.abi = {
-    home.packages = with pkgs; [
-      # GUI applications
-      audacity
-      discord
-      pkgs-unstable.firefox
-      gimp
-      jetbrains.idea-oss
-      kitty
-      prusa-slicer
-      reaper
-      recordbox
-      ungoogled-chromium
-      vital
-      xfce.thunar
-
-      # GUI utilities
-      gradia
-      mpv
-      pavucontrol
-
-      # Games
-      prismlauncher
-    ];
-  };
 }
