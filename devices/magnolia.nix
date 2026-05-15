@@ -47,6 +47,7 @@
   # figure out how to configure
   # keyboard layout: colemak/us
   # automatically adjust brightness: off
+  # remap caps lock to control
 
   # services
   programs.fish.enable = true;
