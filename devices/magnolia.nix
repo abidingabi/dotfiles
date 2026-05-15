@@ -18,7 +18,6 @@
     ../applications/home/git.nix
 
     ../applications/home/kitty.nix
-    ../applications/home/gui-apps.nix
   ];
 
   nix.package = pkgs.lix;
@@ -27,11 +26,11 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
-  users.users.abi = { home = "/Users/abi"; };
-  home-manager.users.abi = { home.stateVersion = "25.11"; };
-
   networking.hostName = "magnolia";
   networking.computerName = "magnolia";
+
+  users.users.abi = { home = "/Users/abi"; };
+  home-manager.users.abi = { home.stateVersion = "25.11"; };
 
   system.primaryUser = "abi";
 
@@ -52,4 +51,11 @@
   # services
   programs.fish.enable = true;
   services.tailscale.enable = true;
+
+  homebrew = {
+    enable = true;
+
+    # gui apps
+    casks = [ "firefox" "discord" ];
+  };
 }
