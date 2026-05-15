@@ -27,7 +27,7 @@
         github.user = "abidingabi";
 
         gpg.format = "ssh";
-        user.signingkey = "/home/abi/.ssh/id_ed25519.pub";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
         commit.gpgsign = true;
       };
     };

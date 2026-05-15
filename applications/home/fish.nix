@@ -1,6 +1,10 @@
+{ pkgs-unstable, ... }:
+
 {
   home-manager.users.abi = {
     programs.fish = {
+      package = pkgs-unstable.fish;
+
       enable = true;
 
       shellInit = ''

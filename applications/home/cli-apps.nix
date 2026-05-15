@@ -29,16 +29,16 @@
       unzip
       visidata
       whois
-      xclip
-      xdotool
-      xorg.xwininfo
+      # xclip
+      # xdotool
+      # xorg.xwininfo
       zip
 
       # programming stuff
       gcc
       gdb
       gnumake
-      valgrind
+      # valgrind
 
       nixfmt-classic
 

@@ -1,3 +1,5 @@
+{ pkgs-unstable, ... }:
+
 {
   home-manager.users.abi = {
     programs.kitty = {
@@ -7,7 +9,7 @@
         font_family Fira Mono
         cursor_shape beam
         font_size 14
-        shell fish
+        shell ${pkgs-unstable.fish}/bin/fish
         confirm_os_window_close 0
       '';
     };

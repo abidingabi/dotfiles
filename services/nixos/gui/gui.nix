@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports =
     [ ./gnome.nix ./home/fonts.nix ./input-devices.nix ./usb-automount.nix ];
