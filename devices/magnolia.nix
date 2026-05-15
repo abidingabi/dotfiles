@@ -31,6 +31,7 @@
   home-manager.users.abi = { home.stateVersion = "25.11"; };
 
   networking.hostName = "magnolia";
+  networking.computerName = "magnolia";
 
   system.primaryUser = "abi";
 
