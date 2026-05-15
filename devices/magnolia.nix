@@ -30,6 +30,8 @@
   users.users.abi = { home = "/Users/abi"; };
   home-manager.users.abi = { home.stateVersion = "25.11"; };
 
+  networking.hostName = "magnolia";
+
   system.primaryUser = "abi";
 
   # various system config
