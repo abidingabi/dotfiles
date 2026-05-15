@@ -46,4 +46,7 @@
   # figure out how to configure
   # keyboard layout: colemak/us
   # automatically adjust brightness: off
+
+  # services
+  programs.fish.enable = true;
 }
