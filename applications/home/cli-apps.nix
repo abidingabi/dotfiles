@@ -23,7 +23,6 @@
       ripgrep
       ripgrep-all
       tealdeer
-      trash-cli
       tree
       units
       unzip
