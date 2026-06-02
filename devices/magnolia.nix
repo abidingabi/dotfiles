@@ -47,6 +47,11 @@
   # keyboard layout: colemak/us
   # automatically adjust brightness: off
   # remap caps lock to control
+  # control+command to drag windows
+  # allow discord to show desktop notifications
+  # show bluetooth in menu bar
+  # require password after display is turned off: immediately
+  # set max battery charge to 80%
 
   # services
   programs.fish.enable = true;
