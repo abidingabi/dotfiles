@@ -30,6 +30,16 @@
         user.signingkey = "~/.ssh/id_ed25519.pub";
         commit.gpgsign = true;
       };
+
+      includes = [{
+        condition = "gitdir:~/Work/AlphaROC/";
+        contents = {
+          user.email = "abigail@alpharoc.ai";
+          commit.gpgsign = false;
+          github.user = "alphaabigail";
+          core.sshCommand = "ssh -i ~/.ssh/id_ed25519_alpharoc_github";
+        };
+      }];
     };
   };
 }
