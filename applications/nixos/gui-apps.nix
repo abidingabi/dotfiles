@@ -8,7 +8,7 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  home.packages = with pkgs; [
+  home-manager.users.abi.home.packages = with pkgs; [
     # GUI applications
     gimp
     jetbrains.idea-oss
