@@ -14,7 +14,7 @@
     ../applications/home/cli-apps.nix
     ../applications/home/direnv.nix
     ../applications/home/emacs/emacs.nix
-    ../applications/home/fish.nix
+    ../applications/nixos/fish.nix
     ../applications/home/git.nix
 
     ../applications/home/kitty.nix
