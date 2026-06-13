@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -51,8 +56,11 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams =
-    [ "boot.shell_on_fail" "i915.force_probe=46a6" "i915.enable_psr=0" ];
+  boot.kernelParams = [
+    "boot.shell_on_fail"
+    "i915.force_probe=46a6"
+    "i915.enable_psr=0"
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -67,7 +75,7 @@
     fsType = "ext4";
   };
 
-  swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
+  swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
   zramSwap.enable = true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   services.thermald.enable = true;
@@ -83,8 +91,10 @@
   # backup paths
   services.restic.backups.abidingabi = {
     paths = [ "/home/abi" ];
-    extraBackupArgs =
-      [ "--exclude=/home/abi/.cache/*" "--exclude=/home/abi/Android/*" ];
+    extraBackupArgs = [
+      "--exclude=/home/abi/.cache/*"
+      "--exclude=/home/abi/Android/*"
+    ];
     timerConfig.OnCalendar = "0:00";
   };
 

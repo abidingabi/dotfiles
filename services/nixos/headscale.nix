@@ -8,17 +8,26 @@
     settings = {
       server_url = "https://hs.dogbuilt.net";
       logtail.enabled = false;
-      ip_prefixes = [ "fd7a:115c:a1e0::/48" "100.64.0.0/10" ];
+      ip_prefixes = [
+        "fd7a:115c:a1e0::/48"
+        "100.64.0.0/10"
+      ];
 
       dns = {
         base_domain = "priv.dogbuilt.net";
         override_local_dns = false;
-        extra_records = [{
-          name = "rss.priv.dogbuilt.net";
-          type = "A";
-          value = "100.64.0.1";
-        }];
-        nameservers.global = [ "9.9.9.9" "1.1.1.1" "8.8.8.8" ];
+        extra_records = [
+          {
+            name = "rss.priv.dogbuilt.net";
+            type = "A";
+            value = "100.64.0.1";
+          }
+        ];
+        nameservers.global = [
+          "9.9.9.9"
+          "1.1.1.1"
+          "8.8.8.8"
+        ];
       };
     };
   };

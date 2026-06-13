@@ -1,1 +1,7 @@
-{ home-manager.users.abi = { services.syncthing = { enable = true; }; }; }
+{
+  home-manager.users.abi = {
+    services.syncthing = {
+      enable = true;
+    };
+  };
+}

@@ -75,8 +75,7 @@
       };
 
       shellAbbrs = {
-        constrain =
-          "systemd-run --user --scope -p MemoryMax=4G -p CPUQuota=100% --";
+        constrain = "systemd-run --user --scope -p MemoryMax=4G -p CPUQuota=100% --";
       };
     };
   };

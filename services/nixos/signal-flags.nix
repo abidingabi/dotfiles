@@ -3,7 +3,8 @@
 let
   port = 3000;
   hostname = "signalflags.dogbuilt.net";
-in {
+in
+{
   imports = [ inputs.signal-flags.nixosModules.default ];
 
   dogbuilt.services.signal-flags = {

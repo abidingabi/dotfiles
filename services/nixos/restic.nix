@@ -6,9 +6,15 @@
   services.restic.backups.abidingabi = {
     initialize = true;
 
-    timerConfig = { WakeSystem = true; };
+    timerConfig = {
+      WakeSystem = true;
+    };
 
-    pruneOpts = [ "--keep-daily 7" "--keep-weekly 4" "--keep-yearly 10" ];
+    pruneOpts = [
+      "--keep-daily 7"
+      "--keep-weekly 4"
+      "--keep-yearly 10"
+    ];
 
     repository = "s3:s3.us-east-005.backblazeb2.com/abidingabi-restic-backup";
     environmentFile = "/home/abi/.local/share/restic/b2-credentials";

@@ -1,8 +1,12 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ ./gnome.nix ./home/fonts.nix ./input-devices.nix ./usb-automount.nix ];
+  imports = [
+    ./gnome.nix
+    ./home/fonts.nix
+    ./input-devices.nix
+    ./usb-automount.nix
+  ];
 
   config = {
     # sound configuration

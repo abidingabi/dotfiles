@@ -21,9 +21,11 @@
     };
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     let
-      mkSystem = system: stateVersion: hostName:
+      mkSystem =
+        system: stateVersion: hostName:
         inputs.nixpkgs.lib.nixosSystem {
           modules = [
             ./devices/base.nix
@@ -32,7 +34,9 @@
               nixpkgs.hostPlatform = system;
               networking.hostName = hostName;
               system.stateVersion = stateVersion;
-              home-manager.users.abi = { home.stateVersion = stateVersion; };
+              home-manager.users.abi = {
+                home.stateVersion = stateVersion;
+              };
             }
           ];
           specialArgs = {
@@ -41,7 +45,8 @@
             pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
           };
         };
-    in {
+    in
+    {
       nixosConfigurations = {
         allium = mkSystem "x86_64-linux" "20.09" "allium"; # a laptop
         lily = mkSystem "x86_64-linux" "22.05" "lily"; # a vps
@@ -62,8 +67,7 @@
           inherit inputs;
 
           # this is a hack
-          pkgs-unstable =
-            inputs.nixpkgs-unstable.legacyPackages."aarch64-darwin";
+          pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages."aarch64-darwin";
         };
       };
 

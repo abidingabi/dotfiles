@@ -1,7 +1,15 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 
-let username = "abi";
-in {
+let
+  username = "abi";
+in
+{
   # Set up home manager
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -16,7 +24,10 @@ in {
       package = pkgs.lixPackageSets.stable.lix;
       settings = {
         auto-optimise-store = true;
-        experimental-features = [ "nix-command" "flakes" ];
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
       };
     };
 
@@ -25,7 +36,11 @@ in {
     programs.nix-ld.enable = true;
 
     # Basic useful packages
-    environment.systemPackages = with pkgs; [ git vim wget ];
+    environment.systemPackages = with pkgs; [
+      git
+      vim
+      wget
+    ];
 
     time.timeZone = "America/New_York";
 

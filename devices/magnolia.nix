@@ -29,8 +29,12 @@
   networking.hostName = "magnolia";
   networking.computerName = "magnolia";
 
-  users.users.abi = { home = "/Users/abi"; };
-  home-manager.users.abi = { home.stateVersion = "25.11"; };
+  users.users.abi = {
+    home = "/Users/abi";
+  };
+  home-manager.users.abi = {
+    home.stateVersion = "25.11";
+  };
 
   system.primaryUser = "abi";
 
@@ -62,6 +66,9 @@
     enable = true;
 
     # gui apps
-    casks = [ "firefox" "discord" ];
+    casks = [
+      "firefox"
+      "discord"
+    ];
   };
 }

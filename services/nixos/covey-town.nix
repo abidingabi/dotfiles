@@ -1,14 +1,26 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  users.users.covey = { isNormalUser = true; };
+  users.users.covey = {
+    isNormalUser = true;
+  };
 
   users.users.covey.openssh.authorizedKeys.keys =
-    config.users.users.abi.openssh.authorizedKeys.keys ++ [''
-      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJvyaS30T+U6uf6oQabxGqOgtecOWsxc9tTsPjU2eJ5t github actions
-    ''];
+    config.users.users.abi.openssh.authorizedKeys.keys
+    ++ [
+      ''
+        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJvyaS30T+U6uf6oQabxGqOgtecOWsxc9tTsPjU2eJ5t github actions
+      ''
+    ];
 
-  virtualisation = { podman.enable = true; };
+  virtualisation = {
+    podman.enable = true;
+  };
 
   services.caddy.extraConfig = ''
     covey.dogbuilt.net {

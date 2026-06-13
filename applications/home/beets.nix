@@ -8,7 +8,11 @@
       settings = {
         directory = "~/music";
         import.move = true;
-        plugins = [ "fetchart" "lyrics" "musicbrainz" ];
+        plugins = [
+          "fetchart"
+          "lyrics"
+          "musicbrainz"
+        ];
 
         paths = {
           default = "$albumartist/$album%aunique{}/$track $title";

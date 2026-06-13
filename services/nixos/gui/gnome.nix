@@ -9,8 +9,14 @@
       "org/gnome" = {
         # inputs
         "desktop/input-sources/sources" = [
-          (lib.gvariant.mkTuple [ "xkb" "us+colemak" ])
-          (lib.gvariant.mkTuple [ "xkb" "us" ])
+          (lib.gvariant.mkTuple [
+            "xkb"
+            "us+colemak"
+          ])
+          (lib.gvariant.mkTuple [
+            "xkb"
+            "us"
+          ])
         ];
 
         # UI things
@@ -39,45 +45,30 @@
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/"
         ];
 
-        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/name" =
-          "Terminal";
-        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/command" =
-          "kitty";
-        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding" =
-          "<Super>Return";
+        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/name" = "Terminal";
+        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/command" = "kitty";
+        "settings-daemon/plugins/media-keys/custom-keybindings/terminal/binding" = "<Super>Return";
 
-        "settings-daemon/plugins/media-keys/custom-keybindings/browser/name" =
-          "Browser";
-        "settings-daemon/plugins/media-keys/custom-keybindings/browser/command" =
-          "firefox";
-        "settings-daemon/plugins/media-keys/custom-keybindings/browser/binding" =
-          "<Shift><Super>Return";
+        "settings-daemon/plugins/media-keys/custom-keybindings/browser/name" = "Browser";
+        "settings-daemon/plugins/media-keys/custom-keybindings/browser/command" = "firefox";
+        "settings-daemon/plugins/media-keys/custom-keybindings/browser/binding" = "<Shift><Super>Return";
 
-        "settings-daemon/plugins/media-keys/custom-keybindings/editor/name" =
-          "Editor";
-        "settings-daemon/plugins/media-keys/custom-keybindings/editor/command" =
-          "emacsclient -c";
-        "settings-daemon/plugins/media-keys/custom-keybindings/editor/binding" =
-          "<Super>e";
+        "settings-daemon/plugins/media-keys/custom-keybindings/editor/name" = "Editor";
+        "settings-daemon/plugins/media-keys/custom-keybindings/editor/command" = "emacsclient -c";
+        "settings-daemon/plugins/media-keys/custom-keybindings/editor/binding" = "<Super>e";
 
-        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/name" =
-          "Clipboard";
-        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/command" =
-          "copyq show";
-        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/binding" =
-          "<Super>v";
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/name" = "Clipboard";
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/command" = "copyq show";
+        "settings-daemon/plugins/media-keys/custom-keybindings/clipboard/binding" = "<Super>v";
 
-        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/name" =
-          "Screenshot";
+        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/name" = "Screenshot";
         "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/command" =
           "gradia --screenshot=INTERACTIVE";
-        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/binding" =
-          "<Shift><Super>s";
+        "settings-daemon/plugins/media-keys/custom-keybindings/screenshot/binding" = "<Shift><Super>s";
 
         # Apps
         # System Manager
-        "gnome-system-monitor/solaris-mode" =
-          false; # Do not divide CPU usage by CPU count
+        "gnome-system-monitor/solaris-mode" = false; # Do not divide CPU usage by CPU count
       };
     };
   };

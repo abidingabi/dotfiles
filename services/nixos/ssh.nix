@@ -12,6 +12,5 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQHRgML+UJL/warzUP5XRWdZMAb/zlcKOVwZfKLVT33 magnolia"
   ];
 
-  users.users.root.openssh.authorizedKeys.keys =
-    config.users.users.abi.openssh.authorizedKeys.keys;
+  users.users.root.openssh.authorizedKeys.keys = config.users.users.abi.openssh.authorizedKeys.keys;
 }

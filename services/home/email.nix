@@ -34,8 +34,7 @@
         msmtp.enable = true;
         mu.enable = true;
 
-        passwordCommand =
-          "${pkgs.coreutils}/bin/cat ~/.local/share/email/abigail-password";
+        passwordCommand = "${pkgs.coreutils}/bin/cat ~/.local/share/email/abigail-password";
       };
     };
   };

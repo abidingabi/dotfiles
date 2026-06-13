@@ -12,7 +12,9 @@
           email = "abigail@dogbuilt.net";
         };
 
-        aliases = { pushf = "push --force-with-lease"; };
+        aliases = {
+          pushf = "push --force-with-lease";
+        };
 
         merge.ff = "only";
         branch.autosetuprebase = "always";
@@ -31,15 +33,17 @@
         commit.gpgsign = true;
       };
 
-      includes = [{
-        condition = "gitdir:~/Work/AlphaROC/";
-        contents = {
-          user.email = "abigail@alpharoc.ai";
-          commit.gpgsign = false;
-          github.user = "alphaabigail";
-          core.sshCommand = "ssh -i ~/.ssh/id_ed25519_alpharoc_github";
-        };
-      }];
+      includes = [
+        {
+          condition = "gitdir:~/Work/AlphaROC/";
+          contents = {
+            user.email = "abigail@alpharoc.ai";
+            commit.gpgsign = false;
+            github.user = "alphaabigail";
+            core.sshCommand = "ssh -i ~/.ssh/id_ed25519_alpharoc_github";
+          };
+        }
+      ];
     };
   };
 }
