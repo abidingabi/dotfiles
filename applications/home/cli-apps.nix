@@ -39,7 +39,7 @@
       gnumake
       # valgrind
 
-      nixfmt-classic
+      nixfmt
 
       fq
       jq
