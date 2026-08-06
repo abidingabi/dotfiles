@@ -15,7 +15,6 @@
 
     ../services/home/syncthing.nix
 
-    ../services/nixos/covey-town.nix
     ../services/nixos/signal-flags.nix
     ../services/nixos/pronoun-space.nix
   ];
