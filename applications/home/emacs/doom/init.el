@@ -27,9 +27,9 @@
        (vertico +icons)           ; the search engine of the future
 
        :ui
+       dashboard         ; a nifty splash screen for Emacs
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
-       doom-dashboard    ; a nifty splash screen for Emacs
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
