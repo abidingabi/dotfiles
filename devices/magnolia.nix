@@ -56,8 +56,8 @@
   # show bluetooth in menu bar
   # require password after display is turned off: immediately
   # set max battery charge to 80%
+  # enable clipboard manager
 
-  # install graphical tailscale
 
   # services
   programs.fish.enable = true;
@@ -69,6 +69,7 @@
     casks = [
       "firefox"
       "discord"
+      "tailscale-app"
     ];
   };
 }
