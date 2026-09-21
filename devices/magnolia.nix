@@ -41,10 +41,24 @@
   # various system config
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # dock settings
-  system.defaults.dock = {
-    autohide = true;
-    persistent-apps = [ ];
+  system.defaults = {
+    # dock settings
+    # manually disable: "Show suggested and recent apps in the dock"
+    dock = {
+      autohide = false;
+      persistent-apps = [
+        { app = "/Applications/Firefox.app"; }
+        { app = "/Users/abi/Applications/Home Manager Apps/Kitty.app"; }
+        { app = "/Users/abi/Applications/Home Manager Apps/Emacs.app"; }
+        { app = "/Applications/Discord.app"; }
+      ];
+    };
+
+    # finder settings
+    finder = {
+      "AppleShowAllFiles" = true;
+      "_FXShowPosixPathInTitle" = true;
+    };
   };
 
   # figure out how to configure
@@ -53,11 +67,10 @@
   # remap caps lock to control
   # control+command to drag windows
   # allow discord to show desktop notifications
-  # show bluetooth in menu bar
+  # show bluetooth, weather in menu bar
   # require password after display is turned off: immediately
   # set max battery charge to 80%
   # enable clipboard manager
-
 
   # services
   programs.fish.enable = true;
