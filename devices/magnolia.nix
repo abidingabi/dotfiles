@@ -50,8 +50,9 @@
         { app = "/Applications/Firefox.app"; }
         { app = "/Users/abi/Applications/Home Manager Apps/Kitty.app"; }
         { app = "/Users/abi/Applications/Home Manager Apps/Emacs.app"; }
+        { app = "/Applications/Visual Studio Code.app"; }
         { app = "/Applications/Discord.app"; }
-      ];
+      ] ;
     };
 
     # finder settings
@@ -71,6 +72,7 @@
   # require password after display is turned off: immediately
   # set max battery charge to 80%
   # enable clipboard manager
+  # always show scrollbars
 
   # services
   programs.fish.enable = true;
@@ -83,6 +85,7 @@
       "firefox"
       "discord"
       "tailscale-app"
+      "visual-studio-code"
     ];
   };
 }
